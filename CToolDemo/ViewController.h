@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CTool.h"
 
 
 
@@ -16,6 +16,9 @@
 
 
 @interface ViewController : UIViewController
+
+
+@property (copy, nonatomic) CToolBlock selectBlock;
 
 
 @end

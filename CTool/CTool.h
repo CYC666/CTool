@@ -23,15 +23,14 @@
 //===================================================颜色=====================================================
 #define cRGB(R,G,B,A)           [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
 #define cHexColA(hexValue, a)   [UIColor colorWithRed:(((hexValue & 0xFF0000) >> 16))/255.0f green:(((hexValue & 0xFF00) >> 8))/255.0f blue:((hexValue & 0xFF))/255.0f alpha:a]
-#define cHexCol(hexValue)       UIColorFromHexA(hexValue, 1.0f)
-#define cPubCol                 UIColorFromHex(0x2287BD)
-#define cBgColor                UIColorFromHex(0xEEEEEE)
-#define cSVPColor               UIColorFromHex(0xE0E0E0)
-#define cWhiteColor             UIColorFromHex(0xFFFFFF)
-#define cBlackColor             UIColorFromHex(0x000000)
-#define cLabColA                UIColorFromHex(0x333333)
-#define cLabColB                UIColorFromHex(0x666666)
-#define cLabColC                UIColorFromHex(0x999999)
+#define cHexCol(hexValue)       cHexColA(hexValue, 1.0f)
+#define cBgColor                cHexCol(0xEEEEEE)
+#define cSVPColor               cHexCol(0xE0E0E0)
+#define cWhiteColor             cHexCol(0xFFFFFF)
+#define cBlackColor             cHexCol(0x000000)
+#define cLabColA                cHexCol(0x333333)
+#define cLabColB                cHexCol(0x666666)
+#define cLabColC                cHexCol(0x999999)
 #define cStaLig                 [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 #define cStaDar                 [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
 
@@ -61,13 +60,36 @@
 
 //===================================================迅设=====================================================
 #define cImage(N)               [UIImage imageNamed:N]
-#define cVieRad(V,R)            [V.layer setCornerRadius:(R)]; [V.layer setMasksToBounds:YES];
-#define cVieRadBor(V,R,C,W)     [V.layer setCornerRadius:(R)];[V.layer setMasksToBounds:YES];[V.layer setBorderColor:[C CGColor]];[V.layer setBorderWidth:(W)];
 #define cButTitle(B,T)          [B setTitle:T forState:UIControlStateNormal];
 #define cButColor(B,C)          [B setTitleColor:CforState:UIControlStateNormal];
 #define cButImage(B,N)          [B setImage:cImage(N) forState:UIControlStateNormal];
+#define cURL(S)                 [NSURL URLWithString:(S)]
+#define cNewArr                 [NSMutableArray array];
+// 圆角
+#define cVieRad(V,R)            [V.layer setCornerRadius:(R)]; [V.layer setMasksToBounds:YES];
+// 描边
+#define cVieRadBor(V,R,C,W)     [V.layer setCornerRadius:(R)];[V.layer setMasksToBounds:YES];[V.layer setBorderColor:[C CGColor]];[V.layer setBorderWidth:(W)];
+// 富文本行间距
+#define cParStr(Lab,S,L)        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:S];\
+                                NSMutableParagraphStyle *paragrah = [[NSMutableParagraphStyle alloc] init];\
+                                paragrah.lineSpacing = L;\
+                                paragrah.paragraphSpacing = L;\
+                                [string addAttribute:NSParagraphStyleAttributeName value:paragrah range:NSMakeRange(0, string.length)];\
+                                Lab.attributedText = string;
+// 版本号
+#define cAppVersion             [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+// 打开连接
+#define cOpenUrl(s)             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:S]];
+// 收起键盘
+#define cHideKeyBoard           [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+// 触感
+#define cFeed                   if (@available(iOS 10.0, *)) { [[[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleLight] impactOccurred]; }
+// 获取Bundle中的image
+#define cBundleImage(B,N)       [[UIImage alloc] initWithContentsOfFile:[[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.bundle", B]] stringByAppendingPathComponent:N]]
 
 
+
+typedef void(^CToolBlock)(id _Nullable obj);
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -75,6 +97,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CTool : NSObject
 
 
+
+/**
+ 给表示头添加暂无数据页面
+
+ @param tableView 表视图
+ @param dataList 表视图数据源
+ */
++ (void)setNoDateView:(UITableView *)tableView dataList:(NSArray *)dataList;
 
 
 
