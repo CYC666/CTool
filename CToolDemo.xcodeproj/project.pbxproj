@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		933D50902293E5AF00BB2161 /* UIImageView+CImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D508F2293E5AF00BB2161 /* UIImageView+CImageView.m */; };
+		933D50932293E69700BB2161 /* UITextField+CTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D50922293E69700BB2161 /* UITextField+CTextField.m */; };
 		938295142293D3E800386771 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 938295132293D3E800386771 /* ViewController2.m */; };
 		938295172293D45900386771 /* TableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 938295162293D45900386771 /* TableViewCell2.m */; };
 		938295192293D92200386771 /* CToolImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 938295182293D92200386771 /* CToolImages.bundle */; };
 		938295202293E18700386771 /* UIButton+CButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9382951F2293E18700386771 /* UIButton+CButton.m */; };
+		938295232293E42C00386771 /* UILabel+CLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 938295222293E42C00386771 /* UILabel+CLabel.m */; };
 		93D380B12292C8A100F013E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D380B02292C8A100F013E5 /* AppDelegate.m */; };
 		93D380B42292C8A100F013E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D380B32292C8A100F013E5 /* ViewController.m */; };
 		93D380B72292C8A100F013E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D380B52292C8A100F013E5 /* Main.storyboard */; };
@@ -21,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		933D508E2293E5AF00BB2161 /* UIImageView+CImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CImageView.h"; sourceTree = "<group>"; };
+		933D508F2293E5AF00BB2161 /* UIImageView+CImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CImageView.m"; sourceTree = "<group>"; };
+		933D50912293E69700BB2161 /* UITextField+CTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+CTextField.h"; sourceTree = "<group>"; };
+		933D50922293E69700BB2161 /* UITextField+CTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CTextField.m"; sourceTree = "<group>"; };
 		938295122293D3E800386771 /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		938295132293D3E800386771 /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		938295152293D45900386771 /* TableViewCell2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell2.h; sourceTree = "<group>"; };
@@ -28,6 +35,8 @@
 		938295182293D92200386771 /* CToolImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CToolImages.bundle; sourceTree = "<group>"; };
 		9382951E2293E18700386771 /* UIButton+CButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CButton.h"; sourceTree = "<group>"; };
 		9382951F2293E18700386771 /* UIButton+CButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CButton.m"; sourceTree = "<group>"; };
+		938295212293E42C00386771 /* UILabel+CLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+CLabel.h"; sourceTree = "<group>"; };
+		938295222293E42C00386771 /* UILabel+CLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CLabel.m"; sourceTree = "<group>"; };
 		93D380AC2292C8A000F013E5 /* CToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D380AF2292C8A100F013E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93D380B02292C8A100F013E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,6 +106,12 @@
 				93D380C72292C96600F013E5 /* CTool.m */,
 				9382951E2293E18700386771 /* UIButton+CButton.h */,
 				9382951F2293E18700386771 /* UIButton+CButton.m */,
+				938295212293E42C00386771 /* UILabel+CLabel.h */,
+				938295222293E42C00386771 /* UILabel+CLabel.m */,
+				933D508E2293E5AF00BB2161 /* UIImageView+CImageView.h */,
+				933D508F2293E5AF00BB2161 /* UIImageView+CImageView.m */,
+				933D50912293E69700BB2161 /* UITextField+CTextField.h */,
+				933D50922293E69700BB2161 /* UITextField+CTextField.m */,
 				938295182293D92200386771 /* CToolImages.bundle */,
 			);
 			path = CTool;
@@ -173,13 +188,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				933D50902293E5AF00BB2161 /* UIImageView+CImageView.m in Sources */,
 				93D380B42292C8A100F013E5 /* ViewController.m in Sources */,
 				93D380BF2292C8A200F013E5 /* main.m in Sources */,
 				938295202293E18700386771 /* UIButton+CButton.m in Sources */,
 				938295172293D45900386771 /* TableViewCell2.m in Sources */,
 				938295142293D3E800386771 /* ViewController2.m in Sources */,
 				93D380B12292C8A100F013E5 /* AppDelegate.m in Sources */,
+				933D50932293E69700BB2161 /* UITextField+CTextField.m in Sources */,
 				93D380C82292C96600F013E5 /* CTool.m in Sources */,
+				938295232293E42C00386771 /* UILabel+CLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
