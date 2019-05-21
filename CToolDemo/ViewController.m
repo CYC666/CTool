@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CTool.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    
+    UIView *View = [[UIView alloc] initWithFrame:CGRectMake(0, 0, cScrWid, cScrHei)];
+    View.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:View];
+    
+
+    
+    
+    
 }
 
 
