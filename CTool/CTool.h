@@ -79,7 +79,7 @@
 // 版本号
 #define cAppVersion             [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
 // 打开连接
-#define cOpenUrl(s)             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:S]];
+#define cOpenUrl(S)             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:S]];
 // 收起键盘
 #define cHideKeyBoard           [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
 // 触感

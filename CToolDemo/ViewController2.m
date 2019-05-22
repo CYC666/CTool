@@ -64,7 +64,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     [CTool setNoDateView:_listTableView dataList:dataArray];
- 
+    
 }
 
 #pragma mark ========================================动作响应=============================================
