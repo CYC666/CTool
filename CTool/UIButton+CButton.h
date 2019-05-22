@@ -11,12 +11,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^CButtonBlock)(NSInteger tag);
 
 @interface UIButton (CButton)
 
 
 // 添加响应
-- (void)addAction:(CToolBlock)block;
+- (void)addAction:(CButtonBlock)block;
 
 @end
 

@@ -11,10 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^CImageViewBlock)(NSInteger tag);
+
 @interface UIImageView (CImageView)
 
 
-- (void)addAction:(CToolBlock)block;
+- (void)addAction:(CImageViewBlock)block;
 
 
 @end

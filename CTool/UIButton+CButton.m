@@ -13,7 +13,7 @@
 @implementation UIButton (CButton)
 
 
-- (void)addAction:(CToolBlock)block {
+- (void)addAction:(CButtonBlock)block {
     
     // 将block与self绑定
     objc_setAssociatedObject(self, CButtonAction, block, OBJC_ASSOCIATION_COPY_NONATOMIC);
@@ -24,9 +24,9 @@
 
 - (void)buttonAction:(UIButton *)button {
     
-    CToolBlock block = objc_getAssociatedObject(self, CButtonAction);
+    CButtonBlock block = objc_getAssociatedObject(self, CButtonAction);
     if (block) {
-        block(@(button.tag));
+        block(button.tag);
     }
     
 }

@@ -13,7 +13,7 @@
 @implementation UILabel (CLabel)
 
 
-- (void)addAction:(CToolBlock)block {
+- (void)addAction:(CLabelBlock)block {
     
     // 将block与self绑定
     objc_setAssociatedObject(self, CLabelAction, block, OBJC_ASSOCIATION_COPY_NONATOMIC);
@@ -30,9 +30,9 @@
     if (tap.state == UIGestureRecognizerStateEnded) {
         
         // 从绑定关系中获取block
-        CToolBlock block = objc_getAssociatedObject(self, CLabelAction);
+        CLabelBlock block = objc_getAssociatedObject(self, CLabelAction);
         if (block) {
-            block(@(tap.view.tag));
+            block(tap.view.tag);
         }
         
     }

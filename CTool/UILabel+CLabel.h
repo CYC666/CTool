@@ -11,10 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^CLabelBlock)(NSInteger tag);
+
 @interface UILabel (CLabel)
 
 
-- (void)addAction:(CToolBlock)block;
+- (void)addAction:(CLabelBlock)block;
 
 
 

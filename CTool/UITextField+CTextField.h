@@ -11,9 +11,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^CTextFieldBlock)(NSInteger tag);
+
 @interface UITextField (CTextField)
 
-- (void)addAction:(CToolBlock)block;
+- (void)addAction:(CTextFieldBlock)block;
 
 
 @end

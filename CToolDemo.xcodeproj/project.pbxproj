@@ -9,8 +9,15 @@
 /* Begin PBXBuildFile section */
 		933D50902293E5AF00BB2161 /* UIImageView+CImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D508F2293E5AF00BB2161 /* UIImageView+CImageView.m */; };
 		933D50932293E69700BB2161 /* UITextField+CTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D50922293E69700BB2161 /* UITextField+CTextField.m */; };
-		938295142293D3E800386771 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 938295132293D3E800386771 /* ViewController2.m */; };
-		938295172293D45900386771 /* TableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 938295162293D45900386771 /* TableViewCell2.m */; };
+		933D5096229508EC00BB2161 /* CTopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D5095229508EC00BB2161 /* CTopTipView.m */; };
+		933D5098229508FA00BB2161 /* CTopTipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933D5097229508FA00BB2161 /* CTopTipView.xib */; };
+		9347F6D122954DD0006B0F5B /* TopTipViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9347F6CF22954DD0006B0F5B /* TopTipViewDemoController.m */; };
+		9347F6D222954DD0006B0F5B /* TopTipViewDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9347F6D022954DD0006B0F5B /* TopTipViewDemoController.xib */; };
+		9347F6D7229551A5006B0F5B /* cActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9347F6D5229551A5006B0F5B /* cActionViewController.m */; };
+		9347F6D8229551A5006B0F5B /* cActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9347F6D6229551A5006B0F5B /* cActionViewController.xib */; };
+		9347F6DA22955256006B0F5B /* 我是一张图片@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9347F6D922955256006B0F5B /* 我是一张图片@2x.png */; };
+		9347F6DF2295561E006B0F5B /* cParStrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9347F6DD2295561E006B0F5B /* cParStrViewController.m */; };
+		9347F6E02295561E006B0F5B /* cParStrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9347F6DE2295561E006B0F5B /* cParStrViewController.xib */; };
 		938295192293D92200386771 /* CToolImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 938295182293D92200386771 /* CToolImages.bundle */; };
 		938295202293E18700386771 /* UIButton+CButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9382951F2293E18700386771 /* UIButton+CButton.m */; };
 		938295232293E42C00386771 /* UILabel+CLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 938295222293E42C00386771 /* UILabel+CLabel.m */; };
@@ -28,10 +35,19 @@
 		933D508F2293E5AF00BB2161 /* UIImageView+CImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CImageView.m"; sourceTree = "<group>"; };
 		933D50912293E69700BB2161 /* UITextField+CTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+CTextField.h"; sourceTree = "<group>"; };
 		933D50922293E69700BB2161 /* UITextField+CTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CTextField.m"; sourceTree = "<group>"; };
-		938295122293D3E800386771 /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
-		938295132293D3E800386771 /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
-		938295152293D45900386771 /* TableViewCell2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell2.h; sourceTree = "<group>"; };
-		938295162293D45900386771 /* TableViewCell2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell2.m; sourceTree = "<group>"; };
+		933D5094229508EC00BB2161 /* CTopTipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTopTipView.h; sourceTree = "<group>"; };
+		933D5095229508EC00BB2161 /* CTopTipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTopTipView.m; sourceTree = "<group>"; };
+		933D5097229508FA00BB2161 /* CTopTipView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTopTipView.xib; sourceTree = "<group>"; };
+		9347F6CE22954DD0006B0F5B /* TopTipViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopTipViewDemoController.h; sourceTree = "<group>"; };
+		9347F6CF22954DD0006B0F5B /* TopTipViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopTipViewDemoController.m; sourceTree = "<group>"; };
+		9347F6D022954DD0006B0F5B /* TopTipViewDemoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopTipViewDemoController.xib; sourceTree = "<group>"; };
+		9347F6D4229551A5006B0F5B /* cActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cActionViewController.h; sourceTree = "<group>"; };
+		9347F6D5229551A5006B0F5B /* cActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cActionViewController.m; sourceTree = "<group>"; };
+		9347F6D6229551A5006B0F5B /* cActionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cActionViewController.xib; sourceTree = "<group>"; };
+		9347F6D922955256006B0F5B /* 我是一张图片@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我是一张图片@2x.png"; sourceTree = "<group>"; };
+		9347F6DC2295561E006B0F5B /* cParStrViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cParStrViewController.h; sourceTree = "<group>"; };
+		9347F6DD2295561E006B0F5B /* cParStrViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cParStrViewController.m; sourceTree = "<group>"; };
+		9347F6DE2295561E006B0F5B /* cParStrViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cParStrViewController.xib; sourceTree = "<group>"; };
 		938295182293D92200386771 /* CToolImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CToolImages.bundle; sourceTree = "<group>"; };
 		9382951E2293E18700386771 /* UIButton+CButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CButton.h"; sourceTree = "<group>"; };
 		9382951F2293E18700386771 /* UIButton+CButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CButton.m"; sourceTree = "<group>"; };
@@ -62,6 +78,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9347F6CD22954DAF006B0F5B /* TopTipView */ = {
+			isa = PBXGroup;
+			children = (
+				9347F6CE22954DD0006B0F5B /* TopTipViewDemoController.h */,
+				9347F6CF22954DD0006B0F5B /* TopTipViewDemoController.m */,
+				9347F6D022954DD0006B0F5B /* TopTipViewDemoController.xib */,
+			);
+			path = TopTipView;
+			sourceTree = "<group>";
+		};
+		9347F6D32295517E006B0F5B /* cAction */ = {
+			isa = PBXGroup;
+			children = (
+				9347F6D4229551A5006B0F5B /* cActionViewController.h */,
+				9347F6D5229551A5006B0F5B /* cActionViewController.m */,
+				9347F6D6229551A5006B0F5B /* cActionViewController.xib */,
+				9347F6D922955256006B0F5B /* 我是一张图片@2x.png */,
+			);
+			path = cAction;
+			sourceTree = "<group>";
+		};
+		9347F6DB2295560F006B0F5B /* cParStr */ = {
+			isa = PBXGroup;
+			children = (
+				9347F6DC2295561E006B0F5B /* cParStrViewController.h */,
+				9347F6DD2295561E006B0F5B /* cParStrViewController.m */,
+				9347F6DE2295561E006B0F5B /* cParStrViewController.xib */,
+			);
+			path = cParStr;
+			sourceTree = "<group>";
+		};
 		93D380A32292C8A000F013E5 = {
 			isa = PBXGroup;
 			children = (
@@ -86,10 +133,9 @@
 				93D380B02292C8A100F013E5 /* AppDelegate.m */,
 				93D380B22292C8A100F013E5 /* ViewController.h */,
 				93D380B32292C8A100F013E5 /* ViewController.m */,
-				938295122293D3E800386771 /* ViewController2.h */,
-				938295132293D3E800386771 /* ViewController2.m */,
-				938295152293D45900386771 /* TableViewCell2.h */,
-				938295162293D45900386771 /* TableViewCell2.m */,
+				9347F6DB2295560F006B0F5B /* cParStr */,
+				9347F6D32295517E006B0F5B /* cAction */,
+				9347F6CD22954DAF006B0F5B /* TopTipView */,
 				93D380B52292C8A100F013E5 /* Main.storyboard */,
 				93D380B82292C8A200F013E5 /* Assets.xcassets */,
 				93D380BA2292C8A200F013E5 /* LaunchScreen.storyboard */,
@@ -112,6 +158,9 @@
 				933D508F2293E5AF00BB2161 /* UIImageView+CImageView.m */,
 				933D50912293E69700BB2161 /* UITextField+CTextField.h */,
 				933D50922293E69700BB2161 /* UITextField+CTextField.m */,
+				933D5094229508EC00BB2161 /* CTopTipView.h */,
+				933D5095229508EC00BB2161 /* CTopTipView.m */,
+				933D5097229508FA00BB2161 /* CTopTipView.xib */,
 				938295182293D92200386771 /* CToolImages.bundle */,
 			);
 			path = CTool;
@@ -175,9 +224,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				93D380BC2292C8A200F013E5 /* LaunchScreen.storyboard in Resources */,
+				9347F6D222954DD0006B0F5B /* TopTipViewDemoController.xib in Resources */,
 				938295192293D92200386771 /* CToolImages.bundle in Resources */,
 				93D380B92292C8A200F013E5 /* Assets.xcassets in Resources */,
+				9347F6E02295561E006B0F5B /* cParStrViewController.xib in Resources */,
 				93D380B72292C8A100F013E5 /* Main.storyboard in Resources */,
+				933D5098229508FA00BB2161 /* CTopTipView.xib in Resources */,
+				9347F6D8229551A5006B0F5B /* cActionViewController.xib in Resources */,
+				9347F6DA22955256006B0F5B /* 我是一张图片@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,12 +246,14 @@
 				93D380B42292C8A100F013E5 /* ViewController.m in Sources */,
 				93D380BF2292C8A200F013E5 /* main.m in Sources */,
 				938295202293E18700386771 /* UIButton+CButton.m in Sources */,
-				938295172293D45900386771 /* TableViewCell2.m in Sources */,
-				938295142293D3E800386771 /* ViewController2.m in Sources */,
 				93D380B12292C8A100F013E5 /* AppDelegate.m in Sources */,
 				933D50932293E69700BB2161 /* UITextField+CTextField.m in Sources */,
 				93D380C82292C96600F013E5 /* CTool.m in Sources */,
+				9347F6D122954DD0006B0F5B /* TopTipViewDemoController.m in Sources */,
+				9347F6DF2295561E006B0F5B /* cParStrViewController.m in Sources */,
+				9347F6D7229551A5006B0F5B /* cActionViewController.m in Sources */,
 				938295232293E42C00386771 /* UILabel+CLabel.m in Sources */,
+				933D5096229508EC00BB2161 /* CTopTipView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

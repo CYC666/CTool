@@ -10,15 +10,21 @@
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 
+// 工具类
+#import "UIButton+CButton.h"
+#import "UILabel+CLabel.h"
+#import "UIImageView+CImageView.h"
+#import "UITextField+CTextField.h"
+#import "CTopTipView.h"
 
 //===================================================尺寸=====================================================
 #define cFit                    ([UIScreen mainScreen].bounds.size.width/375.0)                            // 与375屏的比例
 #define cScrWid                 [UIScreen mainScreen].bounds.size.width                                 // 屏幕宽度
 #define cScrHei                 [UIScreen mainScreen].bounds.size.height                                // 屏幕高度
 #define cNavSta                 [UIApplication sharedApplication].statusBarFrame.size.height            // 状态栏高度
-#define cNavHei                 (kNavSta > 20 ? 88 : 64)                                                // 导航栏高度
-#define cTabHei                 (kNavSta > 20 ? 83 : 49)                                                // 标签栏高度
-#define cSafhei                 (kNavSta > 20 ? 34 : 0)                                                 // 安全区域高度
+#define cNavHei                 (cNavSta > 20 ? 88 : 64)                                                // 导航栏高度
+#define cTabHei                 (cNavSta > 20 ? 83 : 49)                                                // 标签栏高度
+#define cSafhei                 (cNavSta > 20 ? 34 : 0)                                                 // 安全区域高度
 
 //===================================================颜色=====================================================
 #define cRGB(R,G,B,A)           [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
@@ -80,13 +86,14 @@
 #define cAppVersion             [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
 // 打开连接
 #define cOpenUrl(S)             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:S]];
+// 主窗口
+#define cWindow                 [UIApplication sharedApplication].keyWindow
 // 收起键盘
-#define cHideKeyBoard           [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+#define cHideKeyBoard           [cWindow endEditing:YES];
 // 触感
 #define cFeed                   if (@available(iOS 10.0, *)) { [[[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleLight] impactOccurred]; }
 // 获取Bundle中的image
 #define cBundleImage(B,N)       [[UIImage alloc] initWithContentsOfFile:[[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.bundle", B]] stringByAppendingPathComponent:N]]
-
 
 
 typedef void(^CToolBlock)(id _Nullable obj);

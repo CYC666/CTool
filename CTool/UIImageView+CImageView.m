@@ -12,7 +12,7 @@
 
 @implementation UIImageView (CImageView)
 
-- (void)addAction:(CToolBlock)block {
+- (void)addAction:(CImageViewBlock)block {
     
     // 将block与self绑定
     objc_setAssociatedObject(self, CImageViewAction, block, OBJC_ASSOCIATION_COPY_NONATOMIC);
@@ -29,9 +29,9 @@
     if (tap.state == UIGestureRecognizerStateEnded) {
 
         // 从绑定关系中获取block
-        CToolBlock block = objc_getAssociatedObject(self, CImageViewAction);
+        CImageViewBlock block = objc_getAssociatedObject(self, CImageViewAction);
         if (block) {
-            block(@(tap.view.tag));
+            block(tap.view.tag);
         }
     }
     
