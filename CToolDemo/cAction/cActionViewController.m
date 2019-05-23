@@ -30,20 +30,25 @@
     self.title = @"cAvtion";
     
     __weak typeof(self) weakSelf = self;
+    
+    // 给按钮添加快速响应
     [_button addAction:^(NSInteger tag) {
         
         [weakSelf showAction:weakSelf.button.titleLabel.text];
         
     }];
     
+    // 给按标签加快速响应
     [_label addAction:^(NSInteger tag) {
         [weakSelf showAction:weakSelf.label.text];
     }];
     
+    // 给图片添加快速响应
     [_imageView addAction:^(NSInteger tag) {
         [weakSelf showAction:[NSString stringWithFormat:@"%ld", weakSelf.imageView.tag]];
     }];
     
+    // 给输入框添加快速响应
     [_field addAction:^(NSInteger tag) {
         [weakSelf showAction:weakSelf.field.placeholder];
     }];

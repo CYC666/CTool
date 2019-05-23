@@ -47,12 +47,11 @@ static NSString *CTopTipViewString = @"CTopTipViewStringCTopTipViewStringCTopTip
         instance.frame = CGRectMake(0, -cNavHei, cScrWid, cNavHei);
         [cWindow addSubview:instance];
         
-//        // 初始化
-//        [self setObDistance:15];
-//        [self setTextColor:cLabColA];
-//        [self setTextFont:cFontB];
-//        [self setBackgroupColor:[UIColor whiteColor]];
-//        [self setDisplayTime:4];
+        // 添加上滑手势
+        UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:instance action:@selector(swipeAction:)];
+        swipe.direction = UISwipeGestureRecognizerDirectionUp;
+        [instance addGestureRecognizer:swipe];
+        
     });
     
     return instance;
@@ -66,6 +65,7 @@ static NSString *CTopTipViewString = @"CTopTipViewStringCTopTipViewStringCTopTip
     }
     return instance;
 }
+
 
 
 
@@ -100,13 +100,43 @@ static NSString *CTopTipViewString = @"CTopTipViewStringCTopTipViewStringCTopTip
         self.transform = CGAffineTransformMakeTranslation(0, cNavHei);
     } completion:^(BOOL finished) {
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(displayTime.floatValue * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [UIView animateWithDuration:animationTime.floatValue animations:^{
-                self.transform = CGAffineTransformMakeTranslation(0, 0);
-            }];
-        });
+        [self performSelector:@selector(hideAction) withObject:nil afterDelay:displayTime.floatValue];
         
     }];
+    
+}
+
+#pragma mark - 关闭
+- (void)hideAction {
+    
+    // 动画时长
+    NSNumber *animationTime = objc_getAssociatedObject(CTopTipViewString, CTOPTIPVIEWANIMATIONTIME);
+    animationTime = animationTime.floatValue > 0 ? animationTime : @(0.25);
+    
+    [UIView animateWithDuration:animationTime.floatValue animations:^{
+        self.transform = CGAffineTransformMakeTranslation(0, 0);
+    }];
+    
+}
+
+
+#pragma mark - 上滑关闭
+- (void)swipeAction:(UISwipeGestureRecognizer *)swipe {
+    
+    if (swipe.state == UIGestureRecognizerStateEnded) {
+        
+        // 将延迟关闭的请求方法取消
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hideAction) object:nil];
+        
+        // 动画时长
+        NSNumber *animationTime = objc_getAssociatedObject(CTopTipViewString, CTOPTIPVIEWANIMATIONTIME);
+        animationTime = animationTime.floatValue > 0 ? animationTime : @(0.25);
+        
+        [UIView animateWithDuration:animationTime.floatValue animations:^{
+            self.transform = CGAffineTransformMakeTranslation(0, 0);
+        }];
+        
+    }
     
 }
 
@@ -128,7 +158,6 @@ static NSString *CTopTipViewString = @"CTopTipViewStringCTopTipViewStringCTopTip
 + (void)setBackgroupColor:(UIColor *)color {
     
     objc_setAssociatedObject(CTopTipViewString, CTOPTIPVIEWLBACKGROUPCOLOR, color, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-
     
 }
 
@@ -151,8 +180,7 @@ static NSString *CTopTipViewString = @"CTopTipViewStringCTopTipViewStringCTopTip
 }
 
 
-
-
+#pragma mark ========================================功能方法=============================================
 + (void)showWithText:(NSString *)text {
     
     [[self shareTipView] showText:text];
@@ -164,7 +192,6 @@ static NSString *CTopTipViewString = @"CTopTipViewStringCTopTipViewStringCTopTip
     
     self.textLabel.text = text;
     [self updateUIAction];
-    
     
 }
 
