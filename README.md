@@ -24,7 +24,9 @@ TopTipView：类似于远程通知在屏幕顶部的提示样式
 3、可自定义：背景颜色、文本颜色、文本字体、弹出/收起动画时长、显示时长、左右边距  
 
 
-
+1.0.8  
+1、解决图片资源不能下载的问题  
+      CTool.podspec 里面添加源文件路径 s.resources = 'CTool/CToolImages.bundle'
 
 
 

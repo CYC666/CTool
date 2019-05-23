@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
 s.name        = 'CTool'
-s.version     = '1.0.7'
+s.version     = '1.0.8'
 s.authors     = { 'CYC666' => '13705038428@163.com@163.com' }
 s.homepage    = 'https://github.com/CYC666/CTool'
 s.summary     = 'a tool for CYC666'
-s.source      = { :git => 'https://github.com/CYC666/CTool.git', :tag => "1.0.7" }
+s.source      = { :git => 'https://github.com/CYC666/CTool.git', :tag => "1.0.8" }
 s.license     = { :type => "MIT", :file => "LICENSE" }
 
 s.platform = :ios, '11.0'
