@@ -51,5 +51,60 @@
     
 }
 
+#pragma mark -
++ (NSString *)forTwoDecimalString:(NSString *)str {
+    str = [NSString stringWithFormat:@"%.2f", str.floatValue];
+    return [self forDecimalString:str];
+}
++ (NSString *)forThreeDecimalString:(NSString *)str {
+    str = [NSString stringWithFormat:@"%.3f", str.floatValue];
+    return [self forDecimalString:str];
+}
++ (NSString *)forFourDecimalString:(NSString *)str {
+    str = [NSString stringWithFormat:@"%.4f", str.floatValue];
+    return [self forDecimalString:str];
+}
++ (NSString *)forSixDecimalString:(NSString *)str {
+    str = [NSString stringWithFormat:@"%.6f", str.floatValue];
+    return [self forDecimalString:str];
+}
++ (NSString *)forEightDecimalString:(NSString *)str {
+    str = [NSString stringWithFormat:@"%.8f", str.floatValue];
+    return [self forDecimalString:str];
+}
+
++ (NSString *)forDecimalString:(NSString *)str {
+    
+    // 从最后一位不是0或.留下
+    for (NSInteger i = str.length - 1; i > 0; i--) {
+        
+        NSString *c = [str substringWithRange:NSMakeRange(i, 1)];
+        
+        if ([c isEqualToString:@"0"]) {
+            continue;
+        } else if ([c isEqualToString:@"."]) {
+            return [str substringToIndex:i];
+        } else {
+            return [str substringToIndex:i+1];
+        }
+        
+    }
+    
+    return @"0";
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

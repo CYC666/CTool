@@ -11,6 +11,7 @@
 		933D50932293E69700BB2161 /* UITextField+CTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D50922293E69700BB2161 /* UITextField+CTextField.m */; };
 		933D5096229508EC00BB2161 /* CTopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D5095229508EC00BB2161 /* CTopTipView.m */; };
 		933D5098229508FA00BB2161 /* CTopTipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933D5097229508FA00BB2161 /* CTopTipView.xib */; };
+		933D94E9229F813400424525 /* UIView+CToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D94E8229F813400424525 /* UIView+CToast.m */; };
 		9347F6D122954DD0006B0F5B /* TopTipViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9347F6CF22954DD0006B0F5B /* TopTipViewDemoController.m */; };
 		9347F6D222954DD0006B0F5B /* TopTipViewDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9347F6D022954DD0006B0F5B /* TopTipViewDemoController.xib */; };
 		9347F6D7229551A5006B0F5B /* cActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9347F6D5229551A5006B0F5B /* cActionViewController.m */; };
@@ -21,6 +22,8 @@
 		938295192293D92200386771 /* CToolImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 938295182293D92200386771 /* CToolImages.bundle */; };
 		938295202293E18700386771 /* UIButton+CButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9382951F2293E18700386771 /* UIButton+CButton.m */; };
 		938295232293E42C00386771 /* UILabel+CLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 938295222293E42C00386771 /* UILabel+CLabel.m */; };
+		938629F32296826300D3A8D6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938629F12296826300D3A8D6 /* TableViewCell.swift */; };
+		938629F42296826300D3A8D6 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938629F22296826300D3A8D6 /* TableViewCell.xib */; };
 		93D380B12292C8A100F013E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D380B02292C8A100F013E5 /* AppDelegate.m */; };
 		93D380B42292C8A100F013E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D380B32292C8A100F013E5 /* ViewController.m */; };
 		93D380B72292C8A100F013E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D380B52292C8A100F013E5 /* Main.storyboard */; };
@@ -38,6 +41,8 @@
 		933D5094229508EC00BB2161 /* CTopTipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTopTipView.h; sourceTree = "<group>"; };
 		933D5095229508EC00BB2161 /* CTopTipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTopTipView.m; sourceTree = "<group>"; };
 		933D5097229508FA00BB2161 /* CTopTipView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTopTipView.xib; sourceTree = "<group>"; };
+		933D94E7229F813400424525 /* UIView+CToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CToast.h"; sourceTree = "<group>"; };
+		933D94E8229F813400424525 /* UIView+CToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CToast.m"; sourceTree = "<group>"; };
 		9347F6CE22954DD0006B0F5B /* TopTipViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopTipViewDemoController.h; sourceTree = "<group>"; };
 		9347F6CF22954DD0006B0F5B /* TopTipViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopTipViewDemoController.m; sourceTree = "<group>"; };
 		9347F6D022954DD0006B0F5B /* TopTipViewDemoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopTipViewDemoController.xib; sourceTree = "<group>"; };
@@ -53,6 +58,9 @@
 		9382951F2293E18700386771 /* UIButton+CButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CButton.m"; sourceTree = "<group>"; };
 		938295212293E42C00386771 /* UILabel+CLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+CLabel.h"; sourceTree = "<group>"; };
 		938295222293E42C00386771 /* UILabel+CLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CLabel.m"; sourceTree = "<group>"; };
+		938629F02296826200D3A8D6 /* CToolDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CToolDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		938629F12296826300D3A8D6 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		938629F22296826300D3A8D6 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		93D380AC2292C8A000F013E5 /* CToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D380AF2292C8A100F013E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93D380B02292C8A100F013E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -133,6 +141,8 @@
 				93D380B02292C8A100F013E5 /* AppDelegate.m */,
 				93D380B22292C8A100F013E5 /* ViewController.h */,
 				93D380B32292C8A100F013E5 /* ViewController.m */,
+				938629F12296826300D3A8D6 /* TableViewCell.swift */,
+				938629F22296826300D3A8D6 /* TableViewCell.xib */,
 				9347F6DB2295560F006B0F5B /* cParStr */,
 				9347F6D32295517E006B0F5B /* cAction */,
 				9347F6CD22954DAF006B0F5B /* TopTipView */,
@@ -141,6 +151,7 @@
 				93D380BA2292C8A200F013E5 /* LaunchScreen.storyboard */,
 				93D380BD2292C8A200F013E5 /* Info.plist */,
 				93D380BE2292C8A200F013E5 /* main.m */,
+				938629F02296826200D3A8D6 /* CToolDemo-Bridging-Header.h */,
 			);
 			path = CToolDemo;
 			sourceTree = "<group>";
@@ -154,6 +165,8 @@
 				9382951F2293E18700386771 /* UIButton+CButton.m */,
 				938295212293E42C00386771 /* UILabel+CLabel.h */,
 				938295222293E42C00386771 /* UILabel+CLabel.m */,
+				933D94E7229F813400424525 /* UIView+CToast.h */,
+				933D94E8229F813400424525 /* UIView+CToast.m */,
 				933D508E2293E5AF00BB2161 /* UIImageView+CImageView.h */,
 				933D508F2293E5AF00BB2161 /* UIImageView+CImageView.m */,
 				933D50912293E69700BB2161 /* UITextField+CTextField.h */,
@@ -197,6 +210,7 @@
 				TargetAttributes = {
 					93D380AB2292C8A000F013E5 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -224,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93D380BC2292C8A200F013E5 /* LaunchScreen.storyboard in Resources */,
+				938629F42296826300D3A8D6 /* TableViewCell.xib in Resources */,
 				9347F6D222954DD0006B0F5B /* TopTipViewDemoController.xib in Resources */,
 				938295192293D92200386771 /* CToolImages.bundle in Resources */,
 				93D380B92292C8A200F013E5 /* Assets.xcassets in Resources */,
@@ -242,11 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938629F32296826300D3A8D6 /* TableViewCell.swift in Sources */,
 				933D50902293E5AF00BB2161 /* UIImageView+CImageView.m in Sources */,
 				93D380B42292C8A100F013E5 /* ViewController.m in Sources */,
 				93D380BF2292C8A200F013E5 /* main.m in Sources */,
 				938295202293E18700386771 /* UIButton+CButton.m in Sources */,
 				93D380B12292C8A100F013E5 /* AppDelegate.m in Sources */,
+				933D94E9229F813400424525 /* UIView+CToast.m in Sources */,
 				933D50932293E69700BB2161 /* UITextField+CTextField.m in Sources */,
 				93D380C82292C96600F013E5 /* CTool.m in Sources */,
 				9347F6D122954DD0006B0F5B /* TopTipViewDemoController.m in Sources */,
@@ -394,7 +411,9 @@
 		93D380C32292C8A200F013E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DHTNF4N569;
 				INFOPLIST_FILE = CToolDemo/Info.plist;
@@ -405,6 +424,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sm.CToolDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CToolDemo/CToolDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -412,7 +434,9 @@
 		93D380C42292C8A200F013E5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DHTNF4N569;
 				INFOPLIST_FILE = CToolDemo/Info.plist;
@@ -423,6 +447,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sm.CToolDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CToolDemo/CToolDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

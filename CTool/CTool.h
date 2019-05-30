@@ -16,6 +16,7 @@
 #import "UIImageView+CImageView.h"
 #import "UITextField+CTextField.h"
 #import "CTopTipView.h"
+#import "UIView+CToast.h"
 
 //===================================================尺寸=====================================================
 #define cFit                    ([UIScreen mainScreen].bounds.size.width/375.0)                            // 与375屏的比例
@@ -112,6 +113,20 @@ NS_ASSUME_NONNULL_BEGIN
  @param dataList 表视图数据源
  */
 + (void)setNoDateView:(UITableView *)tableView dataList:(NSArray *)dataList;
+
+
+/**
+ 123.1239283 -> 123.12
+ 123.1000000 -> 123.1
+ 123.0123122 -> 123.01
+ 123.0000000 -> 123
+ */
++ (NSString *)forTwoDecimalString:(NSString *)str;
++ (NSString *)forThreeDecimalString:(NSString *)str;
++ (NSString *)forFourDecimalString:(NSString *)str;
++ (NSString *)forSixDecimalString:(NSString *)str;
++ (NSString *)forEightDecimalString:(NSString *)str;
+
 
 
 

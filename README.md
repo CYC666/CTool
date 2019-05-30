@@ -28,7 +28,9 @@ TopTipView：类似于远程通知在屏幕顶部的提示样式
 1、解决图片资源不能下载的问题  
       CTool.podspec 里面添加源文件路径 s.resources = 'CTool/CToolImages.bundle'
 
-
+1.0.9
+1、新增CToast提示
+2、新增字符串小数位控制
 
 
 
