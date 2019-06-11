@@ -70,6 +70,7 @@
 #define cButTitle(B,T)          [B setTitle:T forState:UIControlStateNormal];
 #define cButColor(B,C)          [B setTitleColor:CforState:UIControlStateNormal];
 #define cButImage(B,N)          [B setImage:cImage(N) forState:UIControlStateNormal];
+#define cButTitleColor(B,C)     [B setTitleColor:C forState:UIControlStateNormal];
 #define cURL(S)                 [NSURL URLWithString:(S)]
 #define cNewArr                 [NSMutableArray array];
 // 圆角
