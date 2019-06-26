@@ -63,6 +63,19 @@
                                                     <action selector="button3Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hcj-vg-n0W"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBI-x1-Xaz">
+                                                <rect key="frame" x="0.0" y="180" width="414" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="rLI-Z8-Fw2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                                <state key="normal" title="CCopyLabel">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="button4Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yT5-cc-tu0"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -74,8 +87,11 @@
                                             <constraint firstAttribute="trailing" secondItem="041-31-aPu" secondAttribute="trailing" id="EPt-1h-Whs"/>
                                             <constraint firstAttribute="height" constant="900" id="FK7-Kn-Nuw"/>
                                             <constraint firstAttribute="trailing" secondItem="Btv-RY-TLr" secondAttribute="trailing" id="ZOS-Lu-kog"/>
+                                            <constraint firstItem="BBI-x1-Xaz" firstAttribute="leading" secondItem="Cil-wo-Rj7" secondAttribute="leading" id="Zxi-Qg-PPf"/>
                                             <constraint firstItem="76C-AZ-ALn" firstAttribute="top" secondItem="Btv-RY-TLr" secondAttribute="bottom" id="dvp-eb-1XD"/>
                                             <constraint firstAttribute="trailing" secondItem="76C-AZ-ALn" secondAttribute="trailing" id="lkC-Pr-1hI"/>
+                                            <constraint firstItem="BBI-x1-Xaz" firstAttribute="top" secondItem="76C-AZ-ALn" secondAttribute="bottom" id="rhR-Td-Zgk"/>
+                                            <constraint firstAttribute="trailing" secondItem="BBI-x1-Xaz" secondAttribute="trailing" id="xna-n8-FnH"/>
                                         </constraints>
                                     </view>
                                 </subviews>

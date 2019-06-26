@@ -11,7 +11,7 @@
 #import "TopTipViewDemoController.h"
 #import "cActionViewController.h"
 #import "cParStrViewController.h"
-
+#import "CCopyLabelController.h"
 
 @interface ViewController ()
 
@@ -48,6 +48,10 @@
     [self.navigationController pushViewController:[cParStrViewController new] animated:YES];
 }
 
+- (IBAction)button4Action:(id)sender {
+    
+    [self.navigationController pushViewController:[CCopyLabelController new] animated:YES];
+}
 
 
 @end

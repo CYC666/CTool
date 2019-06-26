@@ -34,5 +34,7 @@ TopTipView：类似于远程通知在屏幕顶部的提示样式
 
 1.1.0
 1、添加了按钮快速设置标题颜色
+2、添加CCopyLabel，可实现长按Label拷贝  
+![Screenshots](Images/CopyLabel.png "Screenshots")    
 
 

@@ -31,7 +31,8 @@
 #define cRGB(R,G,B,A)           [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
 #define cHexColA(hexValue, a)   [UIColor colorWithRed:(((hexValue & 0xFF0000) >> 16))/255.0f green:(((hexValue & 0xFF00) >> 8))/255.0f blue:((hexValue & 0xFF))/255.0f alpha:a]
 #define cHexCol(hexValue)       cHexColA(hexValue, 1.0f)
-#define cBgColor                cHexCol(0xEEEEEE)
+//#define cBgColor                cHexCol(0xEEEEEE)
+#define cBgColor                [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1]     // 这个背景色好看些
 #define cSVPColor               cHexCol(0xE0E0E0)
 #define cWhiteColor             cHexCol(0xFFFFFF)
 #define cBlackColor             cHexCol(0x000000)
