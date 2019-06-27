@@ -51,7 +51,7 @@
     
 }
 
-#pragma mark -
+#pragma mark - 小数的转换
 + (NSString *)forTwoDecimalString:(NSString *)str {
     str = [NSString stringWithFormat:@"%.2f", str.floatValue];
     return [self forDecimalString:str];
@@ -95,7 +95,79 @@
 }
 
 
-
++ (NSString *)getNslogString:(id)obj {
+    
+    // 使用runtime储存、获取层级，从而确定\t的数量。设置后要及时清除，不然会与下次请求冲突
+    NSString *level = objc_getAssociatedObject(obj, @"OBJ_LEVEL");
+    NSString *levelTip; // \t个数
+    if (cStrEmpty(level)) {
+        level = @"0";
+        levelTip = @"\t";
+    } else if (level.intValue == 1) {
+        levelTip = @"\t\t";
+    } else if (level.intValue == 2) {
+        levelTip = @"\t\t\t";
+    } else if (level.intValue == 3) {
+        levelTip = @"\t\t\t";
+    } else {
+        levelTip = @"\t\t\t\t";
+    }
+    NSString *subLevel = [NSString stringWithFormat:@"%d", level.intValue + 1];
+    
+    if ([obj isKindOfClass:[NSDictionary class]]) {
+        
+        // 字典
+        NSMutableString *string = [NSMutableString string];
+        NSDictionary *dic = (NSDictionary *)obj;
+        [string appendString:@"{"];
+        for (NSInteger i = 0; i < dic.allKeys.count; i++) {
+            
+            // 设置下一层及的level
+            objc_setAssociatedObject(dic.allKeys[i], @"OBJ_LEVEL", subLevel, OBJC_ASSOCIATION_COPY_NONATOMIC);
+            objc_setAssociatedObject(dic.allValues[i], @"OBJ_LEVEL", subLevel, OBJC_ASSOCIATION_COPY_NONATOMIC);
+            [string appendFormat:@"\n%@%@ = %@", levelTip, [self getNslogString:dic.allKeys[i]], [self getNslogString:dic.allValues[i]]];
+            if (i != dic.allKeys.count-1) {
+                [string appendString:@","];
+            }
+            
+            // 清除层级level
+            objc_removeAssociatedObjects(dic.allKeys[i]);
+            objc_removeAssociatedObjects(dic.allValues[i]);
+            
+        }
+        [string appendFormat:@"\n%@}", levelTip];
+        return string;
+        
+    } else if ([obj isKindOfClass:[NSArray class]]) {
+        
+        // 数组
+        NSMutableString *string = [NSMutableString string];
+        NSArray *array = (NSArray *)obj;
+        [string appendString:@"["];
+        for (NSInteger i = 0; i < array.count; i++) {
+            
+            // 设置下一层及的level
+            objc_setAssociatedObject(array[i], @"OBJ_LEVEL", subLevel, OBJC_ASSOCIATION_COPY_NONATOMIC);
+            [string appendFormat:@"\n%@%@", levelTip, [self getNslogString:array[i]]];
+            if (i != array.count-1) {
+                [string appendString:@","];
+            }
+            
+            // 清除层级level
+            objc_removeAssociatedObjects(array[i]);
+        }
+        [string appendFormat:@"\n%@]", levelTip];
+        return string;
+        
+    } else {
+        
+        // 其他,直接返回
+        return [NSString stringWithFormat:@"\"%@\"", obj];
+        
+    }
+    
+    
+}
 
 
 

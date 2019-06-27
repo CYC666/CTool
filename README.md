@@ -11,6 +11,8 @@ Import "CTool.h"
   
 ![Screenshots](Images/Home.png "Screenshots")    
 
+![Screenshots](Images/CopyLabel.png "Screenshots")    
+
 
 1.0.7
 
@@ -35,6 +37,7 @@ TopTipView：类似于远程通知在屏幕顶部的提示样式
 1.1.0
 1、添加了按钮快速设置标题颜色
 2、添加CCopyLabel，可实现长按Label拷贝  
-![Screenshots](Images/CopyLabel.png "Screenshots")    
 
+1.1.1
+1、增加了打印对象方法，可实现打印网络请求返回的对象，直接输出中文
 

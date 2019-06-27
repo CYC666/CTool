@@ -25,6 +25,20 @@
     self.title = @"CToolDemo";
     self.view.backgroundColor = cBgColor;
     
+    NSDictionary *dic = @{@"msg":@"成功",
+                          @"code":@"200",
+                          @"data":@{
+                                  @"asdasd":@"asdasdasss",
+                                  @"asdas":@"asdasdsss",
+                                  @"asdd":@"asdasss",
+                                  @"asd":@"asdasdas",
+                                  @"assd":@"dasdasss",
+                                  }
+                          };
+    
+    
+    NSLog(@"%@", [CTool getNslogString:dic]);
+    
     
     
 }

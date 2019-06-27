@@ -17,6 +17,7 @@
 #import "UITextField+CTextField.h"
 #import "CTopTipView.h"
 #import "UIView+CToast.h"
+#import "CCopyLabel.h"
 
 //===================================================尺寸=====================================================
 #define cFit                    ([UIScreen mainScreen].bounds.size.width/375.0)                            // 与375屏的比例
@@ -128,6 +129,16 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)forFourDecimalString:(NSString *)str;
 + (NSString *)forSixDecimalString:(NSString *)str;
 + (NSString *)forEightDecimalString:(NSString *)str;
+
+/**
+ 将对象转换成字符串
+
+ @param obj 对象
+ @return 对象的字符串
+ */
++ (NSString *)getNslogString:(id)obj;
+
+
 
 
 
