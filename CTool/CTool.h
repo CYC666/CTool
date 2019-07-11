@@ -63,23 +63,27 @@
                                 || ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
                                 || ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
 
-//===================================================宏对象=====================================================
+//===================================================字符串=====================================================
+#define cStrIsEqual(S,s)        [S isEqualToString:s]
+#define cStrFormat(S,s)         [NSString stringWithFormat:S, s]
+
+//===================================================按钮=====================================================
+#define cBtnTitle(B,T)          [B setTitle:T forState:UIControlStateNormal];
+#define cBtnColor(B,C)          [B setTitleColor:CforState:UIControlStateNormal];
+#define cBtnImage(B,N)          [B setImage:[UIImage imageNamed:N] forState:UIControlStateNormal];
+#define cBtnSelector(B,S)       [B addTarget:self action:@selector(S) forControlEvents:UIControlEventTouchUpInside];
+
+//===================================================单例对象=====================================================
 #define cDefault                [NSUserDefaults standardUserDefaults]
 #define cDelegat                (AppDelegate *)[UIApplication sharedApplication].delegate
 
 //===================================================迅设=====================================================
 #define cImage(N)               [UIImage imageNamed:N]
-#define cButTitle(B,T)          [B setTitle:T forState:UIControlStateNormal];
-#define cButColor(B,C)          [B setTitleColor:CforState:UIControlStateNormal];
-#define cButImage(B,N)          [B setImage:cImage(N) forState:UIControlStateNormal];
-#define cButTitleColor(B,C)     [B setTitleColor:C forState:UIControlStateNormal];
 #define cURL(S)                 [NSURL URLWithString:(S)]
 #define cNewArr                 [NSMutableArray array];
-// 圆角
+#define cLabelFont(L,F)         L.font = F;
 #define cVieRad(V,R)            [V.layer setCornerRadius:(R)]; [V.layer setMasksToBounds:YES];
-// 描边
 #define cVieRadBor(V,R,C,W)     [V.layer setCornerRadius:(R)];[V.layer setMasksToBounds:YES];[V.layer setBorderColor:[C CGColor]];[V.layer setBorderWidth:(W)];
-// 富文本行间距
 #define cParStr(Lab,S,L)        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:S];\
                                 NSMutableParagraphStyle *paragrah = [[NSMutableParagraphStyle alloc] init];\
                                 paragrah.lineSpacing = L;\

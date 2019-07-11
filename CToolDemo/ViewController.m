@@ -39,6 +39,15 @@
     
     NSLog(@"%@", [CTool getNslogString:dic]);
     
+    NSString *S = @"%@asdasdasd";
+    NSString *s = @"a";
+    
+    NSString *ss = [NSString stringWithFormat:S, s];
+    NSLog(@"%@", ss);
+    
+    UIButton *B = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    
+    cBtnSelector(B, button1Action:)
     
     
 }
