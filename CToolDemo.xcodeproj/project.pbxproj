@@ -13,6 +13,7 @@
 		933D5096229508EC00BB2161 /* CTopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D5095229508EC00BB2161 /* CTopTipView.m */; };
 		933D5098229508FA00BB2161 /* CTopTipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933D5097229508FA00BB2161 /* CTopTipView.xib */; };
 		933D94E9229F813400424525 /* UIView+CToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D94E8229F813400424525 /* UIView+CToast.m */; };
+		9346AEF922D74B2700857CFB /* CTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9346AEF822D74B2700857CFB /* CTimer.m */; };
 		9347F6D122954DD0006B0F5B /* TopTipViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9347F6CF22954DD0006B0F5B /* TopTipViewDemoController.m */; };
 		9347F6D222954DD0006B0F5B /* TopTipViewDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9347F6D022954DD0006B0F5B /* TopTipViewDemoController.xib */; };
 		9347F6D7229551A5006B0F5B /* cActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9347F6D5229551A5006B0F5B /* cActionViewController.m */; };
@@ -49,6 +50,8 @@
 		933D5097229508FA00BB2161 /* CTopTipView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTopTipView.xib; sourceTree = "<group>"; };
 		933D94E7229F813400424525 /* UIView+CToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CToast.h"; sourceTree = "<group>"; };
 		933D94E8229F813400424525 /* UIView+CToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CToast.m"; sourceTree = "<group>"; };
+		9346AEF722D74B2700857CFB /* CTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTimer.h; sourceTree = "<group>"; };
+		9346AEF822D74B2700857CFB /* CTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTimer.m; sourceTree = "<group>"; };
 		9347F6CE22954DD0006B0F5B /* TopTipViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopTipViewDemoController.h; sourceTree = "<group>"; };
 		9347F6CF22954DD0006B0F5B /* TopTipViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopTipViewDemoController.m; sourceTree = "<group>"; };
 		9347F6D022954DD0006B0F5B /* TopTipViewDemoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopTipViewDemoController.xib; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 				93E3F3E022C373F0008CE7D2 /* CCopyLabel.m */,
 				931F841422D71AB700A7A995 /* UIView+CXibExt.h */,
 				931F841522D71AB700A7A995 /* UIView+CXibExt.m */,
+				9346AEF722D74B2700857CFB /* CTimer.h */,
+				9346AEF822D74B2700857CFB /* CTimer.m */,
 				938295182293D92200386771 /* CToolImages.bundle */,
 			);
 			path = CTool;
@@ -291,6 +296,7 @@
 				93D380B42292C8A100F013E5 /* ViewController.m in Sources */,
 				93D380BF2292C8A200F013E5 /* main.m in Sources */,
 				938295202293E18700386771 /* UIButton+CButton.m in Sources */,
+				9346AEF922D74B2700857CFB /* CTimer.m in Sources */,
 				93D380B12292C8A100F013E5 /* AppDelegate.m in Sources */,
 				933D94E9229F813400424525 /* UIView+CToast.m in Sources */,
 				933D50932293E69700BB2161 /* UITextField+CTextField.m in Sources */,

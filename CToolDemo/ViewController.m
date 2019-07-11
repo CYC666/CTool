@@ -12,8 +12,11 @@
 #import "cActionViewController.h"
 #import "cParStrViewController.h"
 #import "CCopyLabelController.h"
+#import "CTimer.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) CTimer *timer;
 
 @end
 
@@ -50,8 +53,20 @@
     cBtnSelector(B, button1Action:)
     
     
+    _timer = [[CTimer alloc] initWithFireTime:1
+                                      interval:0.2
+                                        target:self
+                                      selector:@selector(timerAction:)
+                                       repeats:YES];
+    [_timer fire];
     
     
+}
+
+#pragma mark - 定时器响应
+- (void)timerAction:(CTimer *)timer {
+    
+    NSLog(@"timer");
     
 }
 
