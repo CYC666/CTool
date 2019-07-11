@@ -18,6 +18,7 @@
 #import "CTopTipView.h"
 #import "UIView+CToast.h"
 #import "CCopyLabel.h"
+#import "UIView+CXibExt.h"
 
 //===================================================尺寸=====================================================
 #define cFit                    ([UIScreen mainScreen].bounds.size.width/375.0)                            // 与375屏的比例

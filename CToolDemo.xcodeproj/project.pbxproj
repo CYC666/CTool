@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		931F841622D71AB700A7A995 /* UIView+CXibExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 931F841522D71AB700A7A995 /* UIView+CXibExt.m */; };
 		933D50902293E5AF00BB2161 /* UIImageView+CImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D508F2293E5AF00BB2161 /* UIImageView+CImageView.m */; };
 		933D50932293E69700BB2161 /* UITextField+CTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D50922293E69700BB2161 /* UITextField+CTextField.m */; };
 		933D5096229508EC00BB2161 /* CTopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D5095229508EC00BB2161 /* CTopTipView.m */; };
@@ -37,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		931F841422D71AB700A7A995 /* UIView+CXibExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CXibExt.h"; sourceTree = "<group>"; };
+		931F841522D71AB700A7A995 /* UIView+CXibExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CXibExt.m"; sourceTree = "<group>"; };
 		933D508E2293E5AF00BB2161 /* UIImageView+CImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CImageView.h"; sourceTree = "<group>"; };
 		933D508F2293E5AF00BB2161 /* UIImageView+CImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CImageView.m"; sourceTree = "<group>"; };
 		933D50912293E69700BB2161 /* UITextField+CTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+CTextField.h"; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 				933D5097229508FA00BB2161 /* CTopTipView.xib */,
 				93E3F3DF22C373F0008CE7D2 /* CCopyLabel.h */,
 				93E3F3E022C373F0008CE7D2 /* CCopyLabel.m */,
+				931F841422D71AB700A7A995 /* UIView+CXibExt.h */,
+				931F841522D71AB700A7A995 /* UIView+CXibExt.m */,
 				938295182293D92200386771 /* CToolImages.bundle */,
 			);
 			path = CTool;
@@ -291,6 +296,7 @@
 				933D50932293E69700BB2161 /* UITextField+CTextField.m in Sources */,
 				93D380C82292C96600F013E5 /* CTool.m in Sources */,
 				9347F6D122954DD0006B0F5B /* TopTipViewDemoController.m in Sources */,
+				931F841622D71AB700A7A995 /* UIView+CXibExt.m in Sources */,
 				9347F6DF2295561E006B0F5B /* cParStrViewController.m in Sources */,
 				9347F6D7229551A5006B0F5B /* cActionViewController.m in Sources */,
 				938295232293E42C00386771 /* UILabel+CLabel.m in Sources */,
