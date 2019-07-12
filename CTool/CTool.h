@@ -34,7 +34,6 @@
 #define cRGB(R,G,B,A)           [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
 #define cHexColA(hexValue, a)   [UIColor colorWithRed:(((hexValue & 0xFF0000) >> 16))/255.0f green:(((hexValue & 0xFF00) >> 8))/255.0f blue:((hexValue & 0xFF))/255.0f alpha:a]
 #define cHexCol(hexValue)       cHexColA(hexValue, 1.0f)
-//#define cBgColor                cHexCol(0xEEEEEE)
 #define cBgColor                [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1]     // 这个背景色好看些
 #define cSVPColor               cHexCol(0xE0E0E0)
 #define cWhiteColor             cHexCol(0xFFFFFF)
@@ -55,6 +54,7 @@
 #define cFontD [UIFont          fontWithName:@"PingFangSC-Regular" size:17]
 #define cFontE [UIFont          fontWithName:@"PingFangSC-Regular" size:15]
 #define cFontF [UIFont          fontWithName:@"PingFangSC-Regular" size:13]
+#define cLabelFont(L,F)         L.font = F;
 
 //===================================================空检测=====================================================
 #define cStrEmpty(str)          ([str isKindOfClass:[NSNull class]] || [str isEqualToString:@"<null>"] || str == nil || [str length] < 1 ? YES : NO )
@@ -65,9 +65,22 @@
                                 || ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
                                 || ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
 
+//===================================================通知=====================================================
+#define cNotifiAdd(S,N)       [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(S) name:N object:nil];
+#define cNotifiPost(N)          [[NSNotificationCenter defaultCenter] postNotificationName:N object:nil];
+#define cNotifiDel(N)         [[NSNotificationCenter defaultCenter] removeObserver:self name:N object:nil];
+
+
 //===================================================字符串=====================================================
 #define cStrIsEqual(S,s)        [S isEqualToString:s]
 #define cStrFormat(S,s)         [NSString stringWithFormat:S, s]
+#define cURL(S)                 [NSURL URLWithString:(S)]
+#define cParStr(Lab,S,L)        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:S];\
+                                NSMutableParagraphStyle *paragrah = [[NSMutableParagraphStyle alloc] init];\
+                                paragrah.lineSpacing = L;\
+                                paragrah.paragraphSpacing = L;\
+                                [string addAttribute:NSParagraphStyleAttributeName value:paragrah range:NSMakeRange(0, string.length)];\
+                                Lab.attributedText = string;
 
 //===================================================按钮=====================================================
 #define cBtnTitle(B,T)          [B setTitle:T forState:UIControlStateNormal];
@@ -75,23 +88,22 @@
 #define cBtnImage(B,N)          [B setImage:[UIImage imageNamed:N] forState:UIControlStateNormal];
 #define cBtnSelector(B,S)       [B addTarget:self action:@selector(S) forControlEvents:UIControlEventTouchUpInside];
 
+//===================================================沙盒=====================================================
+#define cPathDocument           [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
+#define cPathCache              [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+
 //===================================================单例对象=====================================================
 #define cDefault                [NSUserDefaults standardUserDefaults]
 #define cDelegat                (AppDelegate *)[UIApplication sharedApplication].delegate
 
-//===================================================迅设=====================================================
-#define cImage(N)               [UIImage imageNamed:N]
-#define cURL(S)                 [NSURL URLWithString:(S)]
-#define cNewArr                 [NSMutableArray array];
-#define cLabelFont(L,F)         L.font = F;
+//===================================================视图=====================================================
 #define cVieRad(V,R)            [V.layer setCornerRadius:(R)]; [V.layer setMasksToBounds:YES];
 #define cVieRadBor(V,R,C,W)     [V.layer setCornerRadius:(R)];[V.layer setMasksToBounds:YES];[V.layer setBorderColor:[C CGColor]];[V.layer setBorderWidth:(W)];
-#define cParStr(Lab,S,L)        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:S];\
-                                NSMutableParagraphStyle *paragrah = [[NSMutableParagraphStyle alloc] init];\
-                                paragrah.lineSpacing = L;\
-                                paragrah.paragraphSpacing = L;\
-                                [string addAttribute:NSParagraphStyleAttributeName value:paragrah range:NSMakeRange(0, string.length)];\
-                                Lab.attributedText = string;
+
+//===================================================图片=====================================================
+#define cImage(N)               [UIImage imageNamed:N]
+
+#define cNewArr                 [NSMutableArray array];
 // 版本号
 #define cAppVersion             [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
 // 打开连接

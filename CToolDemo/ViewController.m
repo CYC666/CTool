@@ -61,6 +61,12 @@
     [_timer fire];
     
     
+//    UIButton *bu = [[UIButton alloc] initWithFrame:CGRectMake(0, 400, cScrWid, cScrHei)];
+//    bu.backgroundColor = cBgColor;
+//    [self.view addSubview:bu];
+//    
+//    cBtnSelector(bu, button1Action:)
+    
 }
 
 #pragma mark - 定时器响应
