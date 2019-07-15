@@ -18,17 +18,17 @@ NS_ASSUME_NONNULL_BEGIN
 // IBInspectable 作用:让你的自定义 UIView 的属性出现在 IB 中 Attributes inspector
 
 // 描边
-@property(nonatomic,assign)IBInspectable CGFloat cBoderWidth;
-@property(nonatomic,assign)IBInspectable CGFloat cBoderRadius;
-@property(nonatomic,strong)IBInspectable UIColor *cBoderColor;
+@property(nonatomic,assign)IBInspectable CGFloat cB_Width;
+@property(nonatomic,assign)IBInspectable CGFloat cB_Radius;
+@property(nonatomic,strong)IBInspectable UIColor *cB_Color;
 
 
 // 阴影
-@property(nonatomic,assign)IBInspectable CGFloat cShadowOffsetX;
-@property(nonatomic,assign)IBInspectable CGFloat cShadowOffsetY;
-@property(nonatomic,assign)IBInspectable CGFloat cShadowRadius;
-@property(nonatomic,assign)IBInspectable CGFloat cShadowOpacity;
-@property(nonatomic,strong)IBInspectable UIColor *cShadowColor;
+@property(nonatomic,assign)IBInspectable CGFloat cS_OffsetX;
+@property(nonatomic,assign)IBInspectable CGFloat cS_OffsetY;
+@property(nonatomic,assign)IBInspectable CGFloat cS_Radius;
+@property(nonatomic,assign)IBInspectable CGFloat cS_Opacity;
+@property(nonatomic,strong)IBInspectable UIColor *cS_Color;
 
 
 @end

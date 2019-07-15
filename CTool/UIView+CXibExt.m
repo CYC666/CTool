@@ -13,60 +13,60 @@
 
 
 // 描边
-- (void)setCBoderWidth:(CGFloat)cBoderWidth {
-    self.layer.borderWidth = cBoderWidth;
+- (void)setCB_Width:(CGFloat)cB_Width {
+    self.layer.borderWidth = cB_Width;
 }
-- (CGFloat)cBoderWidth {
+- (CGFloat)cB_Width {
     return self.layer.borderWidth;
 }
 
-- (void)setCBoderRadius:(CGFloat)cBoderRadius {
-    self.layer.cornerRadius = cBoderRadius;
+- (void)setCB_Radius:(CGFloat)cB_Radius {
+    self.layer.cornerRadius = cB_Radius;
 }
-- (CGFloat)cBoderRadius {
+- (CGFloat)cB_Radius {
     return self.layer.cornerRadius;
 }
 
-- (void)setCBoderColor:(UIColor *)cBoderColor {
-    self.layer.borderColor = cBoderColor.CGColor;
+- (void)setCB_Color:(UIColor *)cB_Color {
+    self.layer.borderColor = cB_Color.CGColor;
 }
-- (UIColor *)cBoderColor {
+- (UIColor *)cB_Color {
     return [UIColor colorWithCGColor:self.layer.borderColor];
 }
 
 // 阴影
-- (void)setCShadowOffsetX:(CGFloat)cShadowOffsetX {
-    self.layer.shadowOffset = CGSizeMake(cShadowOffsetX, self.layer.shadowOffset.height);
+- (void)setCS_OffsetX:(CGFloat)cS_OffsetX {
+    self.layer.shadowOffset = CGSizeMake(cS_OffsetX, self.layer.shadowOffset.height);
 }
-- (CGFloat)cShadowOffsetX {
+- (CGFloat)cS_OffsetX {
     return self.layer.shadowOffset.width;
 }
 
-- (void)setCShadowOffsetY:(CGFloat)cShadowOffsetY {
-    self.layer.shadowOffset = CGSizeMake(self.layer.shadowOffset.width, cShadowOffsetY);
+- (void)setCS_OffsetY:(CGFloat)cS_OffsetY {
+    self.layer.shadowOffset = CGSizeMake(self.layer.shadowOffset.width, cS_OffsetY);
 }
-- (CGFloat)cShadowOffsetY {
+- (CGFloat)cS_OffsetY {
     return self.layer.shadowOffset.height;
 }
 
-- (void)setCShadowRadius:(CGFloat)cShadowRadius {
-    self.layer.shadowRadius = cShadowRadius;
+- (void)setCS_Radius:(CGFloat)cS_Radius {
+    self.layer.shadowRadius = cS_Radius;
 }
-- (CGFloat)cShadowRadius {
+- (CGFloat)cS_Radius {
     return self.layer.shadowRadius;
 }
 
-- (void)setCShadowOpacity:(CGFloat)cShadowOpacity {
-    self.layer.shadowOpacity = cShadowOpacity;
+- (void)setCS_Opacity:(CGFloat)cS_Opacity {
+    self.layer.shadowOpacity = cS_Opacity;
 }
-- (CGFloat)cShadowOpacity {
+- (CGFloat)cS_Opacity {
     return self.layer.shadowOpacity;
 }
 
-- (void)setCShadowColor:(UIColor *)cShadowColor {
-    self.layer.shadowColor = cShadowColor.CGColor;
+- (void)setCS_Color:(UIColor *)cS_Color {
+    self.layer.shadowColor = cS_Color.CGColor;
 }
-- (UIColor *)cShadowColor {
+- (UIColor *)cS_Color {
     return [UIColor colorWithCGColor:self.layer.shadowColor];
 }
 
