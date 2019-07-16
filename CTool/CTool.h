@@ -84,7 +84,7 @@
 
 //===================================================按钮=====================================================
 #define cBtnTitle(B,T)          [B setTitle:T forState:UIControlStateNormal];
-#define cBtnColor(B,C)          [B setTitleColor:CforState:UIControlStateNormal];
+#define cBtnColor(B,C)          [B setTitleColor:C forState:UIControlStateNormal];
 #define cBtnImage(B,N)          [B setImage:[UIImage imageNamed:N] forState:UIControlStateNormal];
 #define cBtnSelector(B,S)       [B addTarget:self action:@selector(S) forControlEvents:UIControlEventTouchUpInside];
 

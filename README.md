@@ -44,5 +44,8 @@ TopTipView：类似于远程通知在屏幕顶部的提示样式
 3、添加了UIView+CXibExt，使得xib中支持直接设置视图的描边、阴影等  
 4、添加了CTimer
 
-1.1.6
+1.1.6 
 1、UIView+CXibExt中的属性名太长，在xib中显示不完全，改短
+
+1.1.7 
+1、添加了UILabel+CXibExt，可快速设置文本的333、666、999颜色

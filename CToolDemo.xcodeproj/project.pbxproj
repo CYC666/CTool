@@ -33,6 +33,7 @@
 		93D380BC2292C8A200F013E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D380BA2292C8A200F013E5 /* LaunchScreen.storyboard */; };
 		93D380BF2292C8A200F013E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D380BE2292C8A200F013E5 /* main.m */; };
 		93D380C82292C96600F013E5 /* CTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D380C72292C96600F013E5 /* CTool.m */; };
+		93D7FE8D22DDCFD5008DF758 /* UILabel+CXibExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D7FE8C22DDCFD5008DF758 /* UILabel+CXibExt.m */; };
 		93E3F3E122C373F0008CE7D2 /* CCopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E3F3E022C373F0008CE7D2 /* CCopyLabel.m */; };
 		93E3F3E622C375E7008CE7D2 /* CCopyLabelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E3F3E422C375E7008CE7D2 /* CCopyLabelController.m */; };
 		93E3F3E722C375E7008CE7D2 /* CCopyLabelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E3F3E522C375E7008CE7D2 /* CCopyLabelController.xib */; };
@@ -82,6 +83,8 @@
 		93D380BE2292C8A200F013E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93D380C62292C96600F013E5 /* CTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTool.h; sourceTree = "<group>"; };
 		93D380C72292C96600F013E5 /* CTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTool.m; sourceTree = "<group>"; };
+		93D7FE8B22DDCFD5008DF758 /* UILabel+CXibExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+CXibExt.h"; sourceTree = "<group>"; };
+		93D7FE8C22DDCFD5008DF758 /* UILabel+CXibExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CXibExt.m"; sourceTree = "<group>"; };
 		93E3F3DF22C373F0008CE7D2 /* CCopyLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCopyLabel.h; sourceTree = "<group>"; };
 		93E3F3E022C373F0008CE7D2 /* CCopyLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCopyLabel.m; sourceTree = "<group>"; };
 		93E3F3E322C375E7008CE7D2 /* CCopyLabelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCopyLabelController.h; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 				93E3F3E022C373F0008CE7D2 /* CCopyLabel.m */,
 				931F841422D71AB700A7A995 /* UIView+CXibExt.h */,
 				931F841522D71AB700A7A995 /* UIView+CXibExt.m */,
+				93D7FE8B22DDCFD5008DF758 /* UILabel+CXibExt.h */,
+				93D7FE8C22DDCFD5008DF758 /* UILabel+CXibExt.m */,
 				9346AEF722D74B2700857CFB /* CTimer.h */,
 				9346AEF822D74B2700857CFB /* CTimer.m */,
 				938295182293D92200386771 /* CToolImages.bundle */,
@@ -306,6 +311,7 @@
 				9347F6DF2295561E006B0F5B /* cParStrViewController.m in Sources */,
 				9347F6D7229551A5006B0F5B /* cActionViewController.m in Sources */,
 				938295232293E42C00386771 /* UILabel+CLabel.m in Sources */,
+				93D7FE8D22DDCFD5008DF758 /* UILabel+CXibExt.m in Sources */,
 				933D5096229508EC00BB2161 /* CTopTipView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
