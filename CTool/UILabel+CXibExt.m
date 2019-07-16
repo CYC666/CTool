@@ -19,17 +19,26 @@
         self.textColor = cHexCol(0x333333);
     }
 }
+- (BOOL)Color333 {
+    return NO;
+}
 
 - (void)setColor666:(BOOL)Color666 {
     if (Color666) {
         self.textColor = cHexCol(0x666666);
     }
 }
+- (BOOL)Color666 {
+    return NO;
+}
 
 - (void)setColor999:(BOOL)Color999 {
     if (Color999) {
         self.textColor = cHexCol(0x999999);
     }
+}
+- (BOOL)Color999 {
+    return NO;
 }
 
 
