@@ -87,7 +87,7 @@
 #define cBtnColor(B,C)          [B setTitleColor:C forState:UIControlStateNormal];
 #define cBtnImage(B,N)          [B setImage:[UIImage imageNamed:N] forState:UIControlStateNormal];
 #define cBtnSelector(B,S)       [B addTarget:self action:@selector(S) forControlEvents:UIControlEventTouchUpInside];
-
+#define cBtnFont(B,F)           B.titleLabel.font = F;
 //===================================================沙盒=====================================================
 #define cPathDocument           [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
 #define cPathCache              [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
@@ -97,12 +97,22 @@
 #define cDelegat                (AppDelegate *)[UIApplication sharedApplication].delegate
 
 //===================================================视图=====================================================
-#define cVieRad(V,R)            [V.layer setCornerRadius:(R)]; [V.layer setMasksToBounds:YES];
-#define cVieRadBor(V,R,C,W)     [V.layer setCornerRadius:(R)];[V.layer setMasksToBounds:YES];[V.layer setBorderColor:[C CGColor]];[V.layer setBorderWidth:(W)];
+#define cViewRadius(V,R)                     [V.layer setCornerRadius:(R)]; [V.layer setMasksToBounds:YES];
+#define cViewBorder(V,R,C,W)            [V.layer setCornerRadius:(R)];[V.layer setMasksToBounds:YES];[V.layer setBorderColor:[C CGColor]];[V.layer setBorderWidth:(W)];
+#define cViewShadow(V,X,Y,R,O,C)     V.layer.shadowOffset = CGSizeMake(X, Y); V.layer.shadowRadius = R; V.layer.shadowOpacity = O; V.layer.shadowColor = C.CGColor;
+#define cViewFocusRadius(V,C,R)     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:V.bounds byRoundingCorners:C cornerRadii:CGSizeMake(R, R)]; \
+                                                CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init]; \
+                                                maskLayer.frame = V.bounds; \
+                                                maskLayer.path = maskPath.CGPath; \
+                                                V.layer.mask = maskLayer;
+#define cViewTopRadius(V,R)  cViewFocusRadius(V,UIRectCornerTopRight | UIRectCornerTopLeft,R)
+#define cViewBottomRadius(V,R)  cViewFocusRadius(V,UIRectCornerBottomRight | UIRectCornerBottomLeft,R)
+
 
 //===================================================图片=====================================================
 #define cImage(N)               [UIImage imageNamed:N]
 
+//===================================================其他=====================================================
 #define cNewArr                 [NSMutableArray array];
 // 版本号
 #define cAppVersion             [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
@@ -116,6 +126,7 @@
 #define cFeed                   if (@available(iOS 10.0, *)) { [[[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleLight] impactOccurred]; }
 // 获取Bundle中的image
 #define cBundleImage(B,N)       [[UIImage alloc] initWithContentsOfFile:[[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.bundle", B]] stringByAppendingPathComponent:N]]
+
 
 
 typedef void(^CToolBlock)(id _Nullable obj);

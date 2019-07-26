@@ -52,6 +52,8 @@
     
     cBtnSelector(B, button1Action:)
     
+
+    
     
     _timer = [[CTimer alloc] initWithFireTime:1
                                       interval:0.2
@@ -59,6 +61,7 @@
                                       selector:@selector(timerAction:)
                                        repeats:YES];
     [_timer fire];
+    
     
     
 //    UIButton *bu = [[UIButton alloc] initWithFrame:CGRectMake(0, 400, cScrWid, cScrHei)];

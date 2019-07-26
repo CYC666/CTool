@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextField *field;
 
+@property (weak, nonatomic) IBOutlet UIView *view1;
 
 
 
@@ -52,6 +53,8 @@
     [_field addAction:^(NSInteger tag) {
         [weakSelf showAction:weakSelf.field.placeholder];
     }];
+    
+    cViewBottomRadius(_view1, 15)
     
 }
 
