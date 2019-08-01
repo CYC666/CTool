@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name        = 'CTool'
-s.version     = '1.1.8'
+s.version     = '1.1.9'
 s.authors     = { 'CYC666' => '13705038428@163.com' }
 s.homepage    = 'https://github.com/CYC666/CTool'
 s.summary     = 'a tool for CYC666'

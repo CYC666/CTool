@@ -29,6 +29,17 @@
 #define cNavHei                 (cNavSta > 20 ? 88 : 64)                                                // 导航栏高度
 #define cTabHei                 (cNavSta > 20 ? 83 : 49)                                                // 标签栏高度
 #define cSafhei                 (cNavSta > 20 ? 34 : 0)                                                 // 安全区域高度
+#define cX(v)                    (v).frame.origin.x
+#define cY(v)                     (v).frame.origin.y
+#define cW(v)                   (v).frame.size.width
+#define cH(v)                   (v).frame.size.height
+#define cMinX(v)            CGRectGetMinX((v).frame) // 获得控件屏幕的x坐标
+#define cMinY(v)            CGRectGetMinY((v).frame) // 获得控件屏幕的Y坐标
+#define cMidX(v)            CGRectGetMidX((v).frame) //横坐标加上到控件中点坐标
+#define cMidY(v)            CGRectGetMidY((v).frame) //纵坐标加上到控件中点坐标
+#define cMaxX(v)            CGRectGetMaxX((v).frame) //横坐标加上控件的宽度
+#define cMaxY(v)            CGRectGetMaxY((v).frame) //纵坐标加上控件的高度
+#define cFrame(X,Y,W,H)  CGRectMake(X, Y, W,H) //适配
 
 //===================================================颜色=====================================================
 #define cRGB(R,G,B,A)           [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
@@ -38,6 +49,7 @@
 #define cSVPColor               cHexCol(0xE0E0E0)
 #define cWhiteColor             cHexCol(0xFFFFFF)
 #define cBlackColor             cHexCol(0x000000)
+#define cClearColor             [UIColor clearColor]
 #define cLabColA                cHexCol(0x333333)
 #define cLabColB                cHexCol(0x666666)
 #define cLabColC                cHexCol(0x999999)
@@ -167,7 +179,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)getNslogString:(id)obj;
 
-
+//绘制渐变色颜色的方法
++ (CAGradientLayer *)setGradualChangingColor:(UIView *)view fromColor:(UIColor *)fromHexColor toColor:(UIColor *)toHexColor;
 
 
 
