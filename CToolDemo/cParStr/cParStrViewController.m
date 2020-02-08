@@ -22,11 +22,11 @@
     self.title = @"cParStr";
     self.view.backgroundColor = cBgColor;
     
-    UIView *View = [[UIView alloc] initWithFrame:CGRectMake(0, 0, cScrWid, cScrHei)];
+    UIView *View = [[UIView alloc] initWithFrame:CGRectMake(0, 0, cScreenWidth, cScreenHeight)];
     View.backgroundColor = [UIColor blackColor];
     [self.view addSubview:View];
 
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, cScrWid, cScrHei)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, cScreenWidth, cScreenHeight)];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor whiteColor];
     label.numberOfLines = 0;

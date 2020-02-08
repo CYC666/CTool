@@ -20,17 +20,18 @@
 #import "CCopyLabel.h"
 #import "UIView+CXibExt.h"
 #import "CTimer.h"
+#import "UIView+cFrame.h"
 
 //===================================================尺寸=====================================================
 #define cFit                    ([UIScreen mainScreen].bounds.size.width/375.0)                            // 与375屏的比例
-#define cScrWid                 [UIScreen mainScreen].bounds.size.width                                 // 屏幕宽度
-#define cScrHei                 [UIScreen mainScreen].bounds.size.height                                // 屏幕高度
-#define cNavSta                 [UIApplication sharedApplication].statusBarFrame.size.height            // 状态栏高度
-#define cNavHei                 (cNavSta > 20 ? 88 : 64)                                                // 导航栏高度
-#define cTabHei                 (cNavSta > 20 ? 83 : 49)                                                // 标签栏高度
-#define cSafhei                 (cNavSta > 20 ? 34 : 0)                                                 // 安全区域高度
-#define cX(v)                    (v).frame.origin.x
-#define cY(v)                     (v).frame.origin.y
+#define cScreenWidth            [UIScreen mainScreen].bounds.size.width                                 // 屏幕宽度
+#define cScreenHeight           [UIScreen mainScreen].bounds.size.height                                // 屏幕高度
+#define cNavStart               [UIApplication sharedApplication].statusBarFrame.size.height            // 状态栏高度
+#define cNavHeight              (cNavStart > 20 ? 88 : 64)                                                // 导航栏高度
+#define cTabHeight              (cNavStart > 20 ? 83 : 49)                                                // 标签栏高度
+#define cSafeHeight             (cNavStart > 20 ? 34 : 0)                                                 // 安全区域高度
+#define cX(v)                   (v).frame.origin.x
+#define cY(v)                   (v).frame.origin.y
 #define cW(v)                   (v).frame.size.width
 #define cH(v)                   (v).frame.size.height
 #define cMinX(v)            CGRectGetMinX((v).frame) // 获得控件屏幕的x坐标
@@ -39,22 +40,22 @@
 #define cMidY(v)            CGRectGetMidY((v).frame) //纵坐标加上到控件中点坐标
 #define cMaxX(v)            CGRectGetMaxX((v).frame) //横坐标加上控件的宽度
 #define cMaxY(v)            CGRectGetMaxY((v).frame) //纵坐标加上控件的高度
-#define cFrame(X,Y,W,H)  CGRectMake(X, Y, W,H) //适配
+#define cFrame(X,Y,W,H)  CGRectMake(X, Y, W, H) //适配
 
 //===================================================颜色=====================================================
 #define cRGB(R,G,B,A)           [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
-#define cHexColA(hexValue, a)   [UIColor colorWithRed:(((hexValue & 0xFF0000) >> 16))/255.0f green:(((hexValue & 0xFF00) >> 8))/255.0f blue:((hexValue & 0xFF))/255.0f alpha:a]
-#define cHexCol(hexValue)       cHexColA(hexValue, 1.0f)
+#define cHexColorA(hexValue, a)   [UIColor colorWithRed:(((hexValue & 0xFF0000) >> 16))/255.0f green:(((hexValue & 0xFF00) >> 8))/255.0f blue:((hexValue & 0xFF))/255.0f alpha:a]
+#define cHexColor(hexValue)       cHexColorA(hexValue, 1.0f)
 #define cBgColor                [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1]     // 这个背景色好看些
-#define cSVPColor               cHexCol(0xE0E0E0)
-#define cWhiteColor             cHexCol(0xFFFFFF)
-#define cBlackColor             cHexCol(0x000000)
+#define cSVPColor               cHexColor(0xE0E0E0)
+#define cWhiteColor             cHexColor(0xFFFFFF)
+#define cBlackColor             cHexColor(0x000000)
 #define cClearColor             [UIColor clearColor]
-#define cLabColA                cHexCol(0x333333)
-#define cLabColB                cHexCol(0x666666)
-#define cLabColC                cHexCol(0x999999)
-#define cStaLig                 [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-#define cStaDar                 [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+#define cLabColA                cHexColor(0x333333)
+#define cLabColB                cHexColor(0x666666)
+#define cLabColC                cHexColor(0x999999)
+#define cStatusLight            [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+#define cStatusDark             [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
 
 //===================================================字体=====================================================
 #define cPfMedium(S)            [UIFont fontWithName:@"PingFangSC-Medium" size:S]

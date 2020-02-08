@@ -44,7 +44,7 @@ static NSString *CTopTipViewString = @"CTopTipViewStringCTopTipViewStringCTopTip
     dispatch_once(&onceToken, ^{
         
         instance = [[[NSBundle mainBundle] loadNibNamed:@"CTopTipView" owner:nil options:nil] firstObject];
-        instance.frame = CGRectMake(0, -cNavHei, cScrWid, cNavHei);
+        instance.frame = CGRectMake(0, -cNavHeight, cScreenWidth, cNavHeight);
         [cWindow addSubview:instance];
         
         // 添加上滑手势
@@ -97,7 +97,7 @@ static NSString *CTopTipViewString = @"CTopTipViewStringCTopTipViewStringCTopTip
     animationTime = animationTime.floatValue > 0 ? animationTime : @(0.25);
     
     [UIView animateWithDuration:animationTime.floatValue animations:^{
-        self.transform = CGAffineTransformMakeTranslation(0, cNavHei);
+        self.transform = CGAffineTransformMakeTranslation(0, cNavHeight);
     } completion:^(BOOL finished) {
         
         [self performSelector:@selector(hideAction) withObject:nil afterDelay:displayTime.floatValue];

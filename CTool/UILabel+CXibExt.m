@@ -16,7 +16,7 @@
 
 - (void)setColor333:(BOOL)Color333 {
     if (Color333) {
-        self.textColor = cHexCol(0x333333);
+        self.textColor = cHexColor(0x333333);
     }
 }
 - (BOOL)Color333 {
@@ -25,7 +25,7 @@
 
 - (void)setColor666:(BOOL)Color666 {
     if (Color666) {
-        self.textColor = cHexCol(0x666666);
+        self.textColor = cHexColor(0x666666);
     }
 }
 - (BOOL)Color666 {
@@ -34,7 +34,7 @@
 
 - (void)setColor999:(BOOL)Color999 {
     if (Color999) {
-        self.textColor = cHexCol(0x999999);
+        self.textColor = cHexColor(0x999999);
     }
 }
 - (BOOL)Color999 {

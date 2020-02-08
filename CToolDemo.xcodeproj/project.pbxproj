@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		177C0FE123EE8EB0008DF9CA /* UIView+cFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 177C0FE023EE8EB0008DF9CA /* UIView+cFrame.m */; };
 		931F841622D71AB700A7A995 /* UIView+CXibExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 931F841522D71AB700A7A995 /* UIView+CXibExt.m */; };
 		933D50902293E5AF00BB2161 /* UIImageView+CImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D508F2293E5AF00BB2161 /* UIImageView+CImageView.m */; };
 		933D50932293E69700BB2161 /* UITextField+CTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D50922293E69700BB2161 /* UITextField+CTextField.m */; };
@@ -40,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		177C0FDF23EE8EB0008DF9CA /* UIView+cFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+cFrame.h"; sourceTree = "<group>"; };
+		177C0FE023EE8EB0008DF9CA /* UIView+cFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+cFrame.m"; sourceTree = "<group>"; };
 		931F841422D71AB700A7A995 /* UIView+CXibExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CXibExt.h"; sourceTree = "<group>"; };
 		931F841522D71AB700A7A995 /* UIView+CXibExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CXibExt.m"; sourceTree = "<group>"; };
 		933D508E2293E5AF00BB2161 /* UIImageView+CImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CImageView.h"; sourceTree = "<group>"; };
@@ -198,6 +201,8 @@
 				931F841522D71AB700A7A995 /* UIView+CXibExt.m */,
 				93D7FE8B22DDCFD5008DF758 /* UILabel+CXibExt.h */,
 				93D7FE8C22DDCFD5008DF758 /* UILabel+CXibExt.m */,
+				177C0FDF23EE8EB0008DF9CA /* UIView+cFrame.h */,
+				177C0FE023EE8EB0008DF9CA /* UIView+cFrame.m */,
 				9346AEF722D74B2700857CFB /* CTimer.h */,
 				9346AEF822D74B2700857CFB /* CTimer.m */,
 				938295182293D92200386771 /* CToolImages.bundle */,
@@ -294,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177C0FE123EE8EB0008DF9CA /* UIView+cFrame.m in Sources */,
 				93E3F3E122C373F0008CE7D2 /* CCopyLabel.m in Sources */,
 				938629F32296826300D3A8D6 /* TableViewCell.swift in Sources */,
 				933D50902293E5AF00BB2161 /* UIImageView+CImageView.m in Sources */,
@@ -456,8 +462,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DHTNF4N569;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CToolDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -466,6 +472,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sm.CToolDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CToolDemo/CToolDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -479,8 +486,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DHTNF4N569;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CToolDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -489,6 +496,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sm.CToolDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CToolDemo/CToolDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
