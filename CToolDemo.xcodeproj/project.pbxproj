@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		177C0FE123EE8EB0008DF9CA /* UIView+cFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 177C0FE023EE8EB0008DF9CA /* UIView+cFrame.m */; };
+		17A7DA7923F3BF85003E79C1 /* UIView+CAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A7DA7823F3BF85003E79C1 /* UIView+CAction.m */; };
 		931F841622D71AB700A7A995 /* UIView+CXibExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 931F841522D71AB700A7A995 /* UIView+CXibExt.m */; };
 		933D50902293E5AF00BB2161 /* UIImageView+CImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D508F2293E5AF00BB2161 /* UIImageView+CImageView.m */; };
 		933D50932293E69700BB2161 /* UITextField+CTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D50922293E69700BB2161 /* UITextField+CTextField.m */; };
@@ -43,6 +44,8 @@
 /* Begin PBXFileReference section */
 		177C0FDF23EE8EB0008DF9CA /* UIView+cFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+cFrame.h"; sourceTree = "<group>"; };
 		177C0FE023EE8EB0008DF9CA /* UIView+cFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+cFrame.m"; sourceTree = "<group>"; };
+		17A7DA7723F3BF85003E79C1 /* UIView+CAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CAction.h"; sourceTree = "<group>"; };
+		17A7DA7823F3BF85003E79C1 /* UIView+CAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CAction.m"; sourceTree = "<group>"; };
 		931F841422D71AB700A7A995 /* UIView+CXibExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CXibExt.h"; sourceTree = "<group>"; };
 		931F841522D71AB700A7A995 /* UIView+CXibExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CXibExt.m"; sourceTree = "<group>"; };
 		933D508E2293E5AF00BB2161 /* UIImageView+CImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CImageView.h"; sourceTree = "<group>"; };
@@ -188,6 +191,8 @@
 				938295222293E42C00386771 /* UILabel+CLabel.m */,
 				933D94E7229F813400424525 /* UIView+CToast.h */,
 				933D94E8229F813400424525 /* UIView+CToast.m */,
+				17A7DA7723F3BF85003E79C1 /* UIView+CAction.h */,
+				17A7DA7823F3BF85003E79C1 /* UIView+CAction.m */,
 				933D508E2293E5AF00BB2161 /* UIImageView+CImageView.h */,
 				933D508F2293E5AF00BB2161 /* UIImageView+CImageView.m */,
 				933D50912293E69700BB2161 /* UITextField+CTextField.h */,
@@ -301,6 +306,7 @@
 			files = (
 				177C0FE123EE8EB0008DF9CA /* UIView+cFrame.m in Sources */,
 				93E3F3E122C373F0008CE7D2 /* CCopyLabel.m in Sources */,
+				17A7DA7923F3BF85003E79C1 /* UIView+CAction.m in Sources */,
 				938629F32296826300D3A8D6 /* TableViewCell.swift in Sources */,
 				933D50902293E5AF00BB2161 /* UIImageView+CImageView.m in Sources */,
 				93E3F3E622C375E7008CE7D2 /* CCopyLabelController.m in Sources */,

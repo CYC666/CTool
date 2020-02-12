@@ -13,6 +13,7 @@
 // 工具类
 #import "UIButton+CButton.h"
 #import "UILabel+CLabel.h"
+#import "UIView+CAction.h"
 #import "UIImageView+CImageView.h"
 #import "UITextField+CTextField.h"
 #import "CTopTipView.h"
