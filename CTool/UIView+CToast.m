@@ -14,7 +14,7 @@
 
 
 // 显示位置
-#define defaultPosition         CSToastPositionBottom
+#define defaultPosition         CSToastPositionTop
 // 是否一个一个依次显示
 #define queueEnabled            NO
 // 是否点击隐藏
