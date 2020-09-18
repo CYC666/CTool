@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-
 + (void)setTextColor:(UIColor *)color;          // 文本颜色
 + (void)setTextFont:(UIFont *)font;             // 文本字体
 + (void)setBackgroupColor:(UIColor *)color;     // 背景颜色

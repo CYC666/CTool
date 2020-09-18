@@ -65,3 +65,7 @@ TopTipView：类似于远程通知在屏幕顶部的提示样式
 
 1.2.3
 1、新增UIView的点击响应
+
+1.3.0
+1、一个方法创建UILabel、UIButton、UITextField
+2、一些基础控件的链式语法

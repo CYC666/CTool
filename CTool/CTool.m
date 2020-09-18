@@ -190,9 +190,140 @@
 }
 
 
+#pragma mark - 根据属性数组，创建一个Label
++ (UILabel *)getLabelWithArray:(NSArray *)list {
+    
+    UILabel *label = [[UILabel alloc] init];
+    
+    for (id obj in list) {
+        
+        if ([obj isKindOfClass:[UIColor class]]) {
+            
+            label.textColor = obj;
+        } else if ([obj isKindOfClass:[NSString class]]) {
+            
+            label.text = obj;
+        } else if ([obj isKindOfClass:[UIFont class]]) {
+            
+            label.font = obj;
+        } else if ([obj isKindOfClass:[NSNumber class]]) {
+            
+            NSNumber *value = (NSNumber *)obj;
+            label.numberOfLines = value.integerValue;
+        } else if ([obj isKindOfClass:[NSValue class]]) {
+            
+            NSValue *value = (NSValue *)obj;
+            if (memcmp(value.objCType, "{CGRect={CGPoint=dd}{CGSize=dd}}", 32) == 0) {
+                
+                label.frame = value.CGRectValue;
+            } else if (memcmp(value.objCType, "{CGPoint=dd}", 12) == 0) {
+                
+                label.center = value.CGPointValue;
+            }
+        } else if ([obj isKindOfClass:[NSDictionary class]]) {
+            
+            NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:label.text];
+            [attString addAttributes:(NSDictionary *)obj range:NSMakeRange(0, label.text.length)];
+            label.attributedText = attString;
+            
+        } else if ([obj isKindOfClass:[UIView class]]) {
+            
+            [(UIView *)obj addSubview:label];
+        }
+    }
+    
+    return label;
+}
 
 
+#pragma mark - 根据属性数组，创建一个UIbutton
++ (UIButton *)getButtonWithArray:(NSArray *)list {
+    
+    UIButton *button = [[UIButton alloc] init];
+    
+    for (id obj in list) {
+        
+        if ([obj isKindOfClass:[UIColor class]]) {
+            
+            [button setTitleColor:obj forState:UIControlStateNormal];
+        } else if ([obj isKindOfClass:[NSString class]]) {
+            
+            [button setTitle:obj forState:UIControlStateNormal];
+        } else if ([obj isKindOfClass:[UIFont class]]) {
+            
+            button.titleLabel.font = obj;
+        } else if ([obj isKindOfClass:[NSNumber class]]) {
+            
+            NSNumber *value = (NSNumber *)obj;
+            button.titleLabel.numberOfLines = value.integerValue;
+        } else if ([obj isKindOfClass:[NSValue class]]) {
+            
+            NSValue *value = (NSValue *)obj;
+            if (memcmp(value.objCType, "{CGRect={CGPoint=dd}{CGSize=dd}}", 32) == 0) {
+                
+                button.frame = value.CGRectValue;
+            } else if (memcmp(value.objCType, "{CGPoint=dd}", 12) == 0) {
+                
+                button.center = value.CGPointValue;
+            }
+        } else if ([obj isKindOfClass:[NSDictionary class]]) {
+            
+            NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:button.titleLabel.text];
+            [attString addAttributes:(NSDictionary *)obj range:NSMakeRange(0, button.titleLabel.text.length)];
+            [button setAttributedTitle:attString forState:UIControlStateNormal];
+            
+        } else if ([obj isKindOfClass:[UIView class]]) {
+            
+            [(UIView *)obj addSubview:button];
+        }
+    }
+    
+    return button;
+}
 
+#pragma mark - 根据属性数组，创建一个Label
++ (UITextField *)getFieldWithArray:(NSArray *)list {
+    
+    UITextField *field = [[UITextField alloc] init];
+    
+    for (id obj in list) {
+        
+        if ([obj isKindOfClass:[UIColor class]]) {
+            
+            field.textColor = obj;
+        } else if ([obj isKindOfClass:[NSString class]]) {
+            
+            field.placeholder = obj;
+        } else if ([obj isKindOfClass:[UIFont class]]) {
+            
+            field.font = obj;
+        } else if ([obj isKindOfClass:[NSNumber class]]) {
+            
+            
+        } else if ([obj isKindOfClass:[NSValue class]]) {
+            
+            NSValue *value = (NSValue *)obj;
+            if (memcmp(value.objCType, "{CGRect={CGPoint=dd}{CGSize=dd}}", 32) == 0) {
+                
+                field.frame = value.CGRectValue;
+            } else if (memcmp(value.objCType, "{CGPoint=dd}", 12) == 0) {
+                
+                field.center = value.CGPointValue;
+            }
+        } else if ([obj isKindOfClass:[NSDictionary class]]) {
+            
+            NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:field.text];
+            [attString addAttributes:(NSDictionary *)obj range:NSMakeRange(0, field.text.length)];
+            field.attributedText = attString;
+            
+        } else if ([obj isKindOfClass:[UIView class]]) {
+            
+            [(UIView *)obj addSubview:field];
+        }
+    }
+    
+    return field;
+}
 
 
 

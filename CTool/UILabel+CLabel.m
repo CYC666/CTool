@@ -38,9 +38,58 @@
     }
     
     
-    
-    
 }
+
+
+#pragma mark ========================================链式语法=============================================
+CLabelSupporM(CGRect, frame)
+CLabelSupporM(CGPoint, center)
+CLabelSupporM(NSString *, text)
+CLabelSupporM(UIColor *, textColor)
+CLabelSupporM(UIColor *, backgroundColor)
+CLabelSupporM(NSInteger, numberOfLines)
+CLabelSupporM(NSAttributedString *, attributedText)
+CLabelSupporM(UIFont *, font)
+CLabelSupporM(NSTextAlignment, textAlignment)
+CLabelSupporM(NSLineBreakMode, lineBreakMode)
+CLabelSupporM(BOOL, adjustsFontSizeToFitWidth)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end

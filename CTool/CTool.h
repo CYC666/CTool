@@ -23,6 +23,8 @@
 #import "CTimer.h"
 #import "UIView+cFrame.h"
 
+
+
 //===================================================尺寸=====================================================
 #define cFit                    ([UIScreen mainScreen].bounds.size.width/375.0)                            // 与375屏的比例
 #define cScreenWidth            [UIScreen mainScreen].bounds.size.width                                 // 屏幕宽度
@@ -184,7 +186,14 @@ NS_ASSUME_NONNULL_BEGIN
 //绘制渐变色颜色的方法
 + (CAGradientLayer *)setGradualChangingColor:(UIView *)view fromColor:(UIColor *)fromHexColor toColor:(UIColor *)toHexColor;
 
+// 根据属性数值，创建一个Label
++ (UILabel *)getLabelWithArray:(NSArray *)list;
 
+// 根据属性数值，创建一个Button
++ (UIButton *)getButtonWithArray:(NSArray *)list;
+
+// 根据属性数值，创建一个Field
++ (UITextField *)getFieldWithArray:(NSArray *)list;
 
 
 @end

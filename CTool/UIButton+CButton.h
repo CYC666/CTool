@@ -9,11 +9,35 @@
 #import <UIKit/UIKit.h>
 #import "CTool.h"
 
+// 链式语法支持
+#define CButtonSupporH(propertyModifier, propertyPointerType, propertyName)           \
+@property(nonatomic,propertyModifier)propertyPointerType  propertyName;                                                 \
+- (UIButton * (^) (propertyPointerType propertyName)) propertyName##Set;
+
+#define CButtonSupporM(propertyPointerType, propertyName)                                       \
+- (UIButton * (^) (propertyPointerType propertyName))propertyName##Set{                                                \
+return ^(propertyPointerType propertyName) {                                                                            \
+self.propertyName = propertyName;                                                                                       \
+return self;                                                                                                            \
+};                                                                                                                      \
+}
+
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^CButtonBlock)(NSInteger tag);
 
 @interface UIButton (CButton)
+
+CButtonSupporH(assign, CGRect, frame)
+CButtonSupporH(assign, CGPoint, center)
+CButtonSupporH(assign, UIControlContentHorizontalAlignment, hAlignment)
+CButtonSupporH(assign, UIControlContentVerticalAlignment, vAlignment)
+CButtonSupporH(copy, NSString *, title)
+CButtonSupporH(strong, UIColor *, color)
+CButtonSupporH(strong, UIColor *, bgColor)
+CButtonSupporH(strong, UIFont *, font)
+CButtonSupporH(strong, UIImage *, image)
+
 
 
 // 添加响应

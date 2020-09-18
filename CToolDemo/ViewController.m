@@ -17,6 +17,7 @@
 @interface ViewController ()
 
 @property (strong, nonatomic) CTimer *timer;
+@property (strong, nonatomic) UILabel *label1;
 
 @end
 
@@ -28,39 +29,66 @@
     self.title = @"CToolDemo";
     self.view.backgroundColor = cBgColor;
     
-    NSDictionary *dic = @{@"msg":@"成功",
-                          @"code":@"200",
-                          @"data":@{
-                                  @"asdasd":@"asdasdasss",
-                                  @"asdas":@"asdasdsss",
-                                  @"asdd":@"asdasss",
-                                  @"asd":@"asdasdas",
-                                  @"assd":@"dasdasss",
-                                  }
-                          };
+    self.label1 = [CTool getLabelWithArray:@[@(CGRectMake(0, 0, 200, 100)),
+                                             [UIColor blueColor],
+                                             @(CGPointMake(cScreenWidth/2.0, cScreenHeight/2.0)),
+                                             [UIFont systemFontOfSize:30],
+                                             @"嗯，好大，是的，非常大，我的天，这也太大了8",
+                                             self.view,
+                                             @(0)]];
+    
+//    self.label1
+//    .setText(@"我的天我的天我的天我的天我的天我的天")
+//    .setTextColor([UIColor blackColor]);
     
     
-    NSLog(@"%@", [CTool getNslogString:dic]);
+    self.label1
+    .frameSet(CGRectMake(100, 300, 300, 120))
+    .textColorSet([UIColor grayColor])
+    .textSet(@"不得了了不得了了不得了了不得了了不得了了");
     
-    NSString *S = @"%@asdasdasd";
-    NSString *s = @"a";
     
-    NSString *ss = [NSString stringWithFormat:S, s];
-    NSLog(@"%@", ss);
+//    UIButton *bu;
+//    bu.hAlignmentSet(UIControlContentHorizontalAlignmentLeft)
     
-    UIButton *B = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    
-    cBtnSelector(B, button1Action:)
-    
+//    self.view.backgroundColor
     
     
     
-    _timer = [[CTimer alloc] initWithFireTime:1
-                                      interval:0.2
-                                        target:self
-                                      selector:@selector(timerAction:)
-                                       repeats:YES];
-    [_timer fire];
+    
+//    NSDictionary *dic = @{@"msg":@"成功",
+//                          @"code":@"200",
+//                          @"data":@{
+//                                  @"asdasd":@"asdasdasss",
+//                                  @"asdas":@"asdasdsss",
+//                                  @"asdd":@"asdasss",
+//                                  @"asd":@"asdasdas",
+//                                  @"assd":@"dasdasss",
+//                                  }
+//                          };
+//
+//
+//    NSLog(@"%@", [CTool getNslogString:dic]);
+//
+//    NSString *S = @"%@asdasdasd";
+//    NSString *s = @"a";
+//
+//    NSString *ss = [NSString stringWithFormat:S, s];
+//    NSLog(@"%@", ss);
+//
+//    UIButton *B = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+//
+//    cBtnSelector(B, button1Action:)
+//
+//
+//
+//
+//    _timer = [[CTimer alloc] initWithFireTime:1
+//                                      interval:0.2
+//                                        target:self
+//                                      selector:@selector(timerAction:)
+//                                       repeats:YES];
+//    [_timer fire];
     
     
     
